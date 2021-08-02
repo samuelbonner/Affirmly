@@ -1,4 +1,4 @@
-# 📜 Barebones React/Sass/Express/TypeScript Boilerplate
+# 📜 Barebones React/Sass/Express/TypeScript Boilerplate Cody
 
 &nbsp;
 
