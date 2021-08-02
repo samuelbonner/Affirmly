@@ -1,1 +1,1 @@
-# ToDoList App (Team 1 Final Project for Cohort 14)
+# 📜 Barebones React/Sass/Express/TypeScript Boilerplate Cody
