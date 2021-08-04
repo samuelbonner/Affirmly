@@ -19,9 +19,9 @@ router.post("/", async (req, res) => {
     const taskObj: task = req.body;
 
     try {
-        const newUser = await db.Users.post(taskObj.userid, taskObj.name, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
+        const newUser = await db.Users.post(taskObj.userid, taskObj.title, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
 
-        await db.Tasks.post(taskObj.userid, taskObj.name, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
+        await db.Tasks.post(taskObj.userid, taskObj.title, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
 
         res.send("success");
 
@@ -58,7 +58,7 @@ router.post("/", async (req, res) => {
 interface task {
     id?: string;
     userid: string;
-    name: string;
+    title: string;
     details: string;
     difficulty: string;
     priority: string;

@@ -1,17 +1,19 @@
 import { Query } from "./index";
 
 // This defines a function ("all") which will return all tasks using the Query function defined in index.ts
+// , users.name
 const allTasks = async () =>
     await Query(`
-    select tasks.id, tasks.name, tasks.details, tasks.difficulty, tasks.priority, tasks.completed, users.name
+    select tasks.id, tasks.title, tasks.details, tasks.difficulty, tasks.priority, tasks.completed
     from tasks
     join users on tasks.userid = users.id
 `);
 
 // This defines a function ("one") which will return one specific task using the Query function defined in index.ts
+// , 
 const oneTask = async (id: string) =>
     await Query(`
-    select tasks.id, tasks.name, tasks.details, tasks.difficulty, tasks.priority, tasks.completed, users.name
+    select tasks.id, tasks.title, tasks.details, tasks.difficulty, tasks.priority, tasks.completed
     from tasks
     join users on tasks.userid = users.id
     where tasks.id = ?;
@@ -21,7 +23,7 @@ const oneTask = async (id: string) =>
 // Not sure if this is necessary, but this should return all tasks from ONE specific user (targeting userid)
 const allTasksFromUser = async (id: string) =>
     await Query(`
-    select tasks.id, tasks.name, tasks.details, tasks.difficulty, tasks.priority, tasks.completed, users.name
+    select tasks.id, tasks.title, tasks.details, tasks.difficulty, tasks.priority, tasks.completed
     from tasks
     join users on tasks.userid = users.id
     where tasks.userid = ?;
