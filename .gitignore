@@ -4,3 +4,6 @@ node_modules/
 # production bundles
 dist/
 public/js/app.js
+
+# hiding passwords for now
+src/server/db/index.ts
