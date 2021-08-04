@@ -16,17 +16,19 @@ router.get("/:id?", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-    const taskObj: task = req.body;
+    // We create a variable for "task Data Transfer Object" to use below
+    const taskDTO: task = req.body;
+    console.log(taskDTO);
 
     try {
-        const newUser = await db.Users.post(taskObj.userid, taskObj.title, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
+        // const newUser = await db.Users.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
 
-        await db.Tasks.post(taskObj.userid, taskObj.title, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
-
+        await db.Tasks.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
+        // taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed
         res.send("success");
 
     } catch (error) {
-        console.log(`There was an error in router.post in tasks.ts, specifically: ${error}`);
+        console.log(`There was an error in router.insert in tasks.ts, specifically: ${error}`);
     }
 });
 
