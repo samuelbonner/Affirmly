@@ -27,8 +27,8 @@ const allTasksFromUser = async (id: string) =>
     where tasks.userid = ?;
 `, [id]);
 
-const post = async (userid: string, name: string, content: string, details: string, difficulty: string, priority: string, completed: string) => Query(`
-    insert into tasks (userid, name, details, difficulty, priority, completed) values (?, ?)
+const post = async (userid: string, name: string, details: string, difficulty: string, priority: string, completed: string) => Query(`
+    insert into tasks (userid, name, details, difficulty, priority, completed) values (?, ?, ?, ?, ?, ?)
 `, [userid, name, details, difficulty, priority, completed]);
 
 const put = async (id: string, newContent: string) => Query(`
@@ -50,4 +50,4 @@ export default {
     post,
     put,
     destroy
-} 
+};
