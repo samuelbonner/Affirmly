@@ -34,6 +34,8 @@ const allTasksFromUser = async (id: string) =>
         [id]
     );
 
+
+// This works but causes a typescript error for the taskDTO 
 // insert into tasks (userid, title, details, difficulty, priority, completed) values (?, ?, ?, ?, ?, ?)
 // const insert = (taskDTO: {
 //     userid: string;
@@ -51,14 +53,15 @@ const insert = (userid: string, title: string, details: string, difficulty: stri
 
 
 
-const put = async (id: string, newContent: string) =>
+const put = async (id: string, newTitle: string, newDetails: string) =>
     await Query(
         `
     UPDATE tasks
-    SET content = ?
+    SET title = ?, 
+    details = ?
     WHERE tasks.id = ?;
 `,
-        [newContent, id]
+        [newTitle, newDetails, id]
     );
 
 const destroy = async (id: string) =>
