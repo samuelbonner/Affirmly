@@ -5,5 +5,6 @@ node_modules/
 dist/
 public/js/app.js
 
-# hiding passwords for now
+# hiding passwords for now]
+.env
 src/server/db/index.ts

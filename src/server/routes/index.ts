@@ -1,8 +1,13 @@
-import * as express from "express";
+import * as express from 'express';
 import tasksRouter from "./tasks";
 
 const router = express.Router();
 
-router.use('/tasks', tasksRouter)
+router.get('/api/hello', (req, res, next) => {
+    res.json('World');
+});
 
-export default router
+// Node does not like the router.use below
+router.use('/api/tasks', tasksRouter);
+
+export default router;

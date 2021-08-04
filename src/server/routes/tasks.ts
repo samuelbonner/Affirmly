@@ -7,10 +7,10 @@ router.get("/:id?", async (req, res) => {
     const id: string = req.params.id;
 
     if (id) {
-        const task = await db.Tasks.one(id);
+        const task = await db.Tasks.oneTask(id);
         res.json(task[0]);
     } else {
-        const tasks = await db.Tasks.all();
+        const tasks = await db.Tasks.allTasks();
         res.json(tasks);
     }
 });
@@ -19,40 +19,41 @@ router.post("/", async (req, res) => {
     const taskObj: task = req.body;
 
     try {
-        const newUser = await db.Users.post(taskObj.name, taskObj.email);
+        const newUser = await db.Users.post(taskObj.userid, taskObj.name, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
 
-        await db.Tasks.post(newUser.insertId, taskObj.content);
+        await db.Tasks.post(taskObj.userid, taskObj.name, taskObj.details, taskObj.difficulty, taskObj.priority, taskObj.completed);
 
         res.send("success");
+
     } catch (error) {
-        console.log(error);
+        console.log(`There was an error in router.post in tasks.ts, specifically: ${error}`);
     }
 });
 
-router.put("/:id", async (req, res) => {
-    const id: string = req.params.id;
-    const newContent: string = req.body.content;
+// router.put("/:id", async (req, res) => {
+//     const id: string = req.params.id;
+//     const newContent: string = req.body.content;
 
-    try {
-        await db.Tasks.put(id, newContent);
+//     try {
+//         await db.Tasks.put(id, newContent);
 
-        res.send("edited successfully");
-    } catch (error) {
-        console.log(error);
-    }
-});
+//         res.send("edited successfully");
+//     } catch (error) {
+//         console.log(`There was an error in router.put in tasks.ts, specifically: ${error}`);
+//     }
+// });
 
-router.delete("/:id", async (req, res) => {
-    const id: string = req.params.id;
+// router.delete("/:id", async (req, res) => {
+//     const id: string = req.params.id;
 
-    try {
-        await db.Tasks.destroy(id);
+//     try {
+//         await db.Tasks.destroy(id);
 
-        res.send("deleted successfully");
-    } catch (error) {
-        console.log(error);
-    }
-});
+//         res.send("deleted successfully");
+//     } catch (error) {
+//         console.log(`There was an error in router.delete in tasks.ts, specifically: ${error}`);
+//     }
+// });
 
 interface task {
     id?: string;
