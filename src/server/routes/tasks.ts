@@ -25,37 +25,38 @@ router.post("/", async (req, res) => {
 
         await db.Tasks.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
         // taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed
-        res.send("success");
+        res.send("Posted successfully");
 
     } catch (error) {
         console.log(`There was an error in router.insert in tasks.ts, specifically: ${error}`);
     }
 });
 
-// router.put("/:id", async (req, res) => {
-//     const id: string = req.params.id;
-//     const newContent: string = req.body.content;
+router.put("/:id", async (req, res) => {
+    const id: string = req.params.id;
+    const newTitle : string = req.body.title;
+    const newDetails: string = req.body.details;
 
-//     try {
-//         await db.Tasks.put(id, newContent);
+    try {
+        await db.Tasks.put(id, newTitle, newDetails);
 
-//         res.send("edited successfully");
-//     } catch (error) {
-//         console.log(`There was an error in router.put in tasks.ts, specifically: ${error}`);
-//     }
-// });
+        res.send("Edited successfully");
+    } catch (error) {
+        console.log(`There was an error in router.put in tasks.ts, specifically: ${error}`);
+    }
+});
 
-// router.delete("/:id", async (req, res) => {
-//     const id: string = req.params.id;
+router.delete("/:id", async (req, res) => {
+    const id: string = req.params.id;
 
-//     try {
-//         await db.Tasks.destroy(id);
+    try {
+        await db.Tasks.destroy(id);
 
-//         res.send("deleted successfully");
-//     } catch (error) {
-//         console.log(`There was an error in router.delete in tasks.ts, specifically: ${error}`);
-//     }
-// });
+        res.send("Deleted successfully");
+    } catch (error) {
+        console.log(`There was an error in router.delete in tasks.ts, specifically: ${error}`);
+    }
+});
 
 interface task {
     id?: string;
