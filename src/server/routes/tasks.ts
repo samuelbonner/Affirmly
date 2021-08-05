@@ -3,6 +3,10 @@ import db from "../db";
 
 const router = express.Router();
 
+
+// This get checks for an optional ID, if an ID is inserted, then it returns one task.
+// If an ID is *not* presented, it currently returns allTasks
+// This probably needs to be updated to use allTasksFromUser instead of allTasks as we get closer to front-end link-up.
 router.get("/:id?", async (req, res) => {
     const id: string = req.params.id;
 
@@ -23,8 +27,8 @@ router.post("/", async (req, res) => {
     try {
         // const newUser = await db.Users.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
 
+        // We use taskDTO and target each individual desired parameter. Inserting the object as a whole throws some typescript errors that are time-consuming.
         await db.Tasks.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
-        // taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed
         res.send("Posted successfully");
 
     } catch (error) {
@@ -32,6 +36,12 @@ router.post("/", async (req, res) => {
     }
 });
 
+
+// This PUT function updates the title and details of a task.
+// Currently the priority & difficulty are not editable features, but can easily be added below.
+// req.body.priority & req.body.difficulty would be the two targetted parameters to edit
+
+// We probably need a put function to update the req.body.completed at some point for when a user uses the "checkbox" on the front-end
 router.put("/:id", async (req, res) => {
     const id: string = req.params.id;
     const newTitle : string = req.body.title;
@@ -46,6 +56,7 @@ router.put("/:id", async (req, res) => {
     }
 });
 
+// Straight-forward, but this DELETE function just deletes the specified task for whatever ID is presented.
 router.delete("/:id", async (req, res) => {
     const id: string = req.params.id;
 
@@ -58,6 +69,7 @@ router.delete("/:id", async (req, res) => {
     }
 });
 
+// These match exactly from the mySQL database setup. If something is changed in one place, it must be changed in both.
 interface task {
     id?: string;
     userid: string;
