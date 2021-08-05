@@ -38,72 +38,72 @@ const TrophyCase = () => {
 <div className="card m-3 col-3" >
   <img src="../images/3DaysInARowTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete Tasks 3 Days in a Row!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/3Difficulty3Trophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete 3 Difficulty-3 Tasks!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/3DifficultyTaskTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete 3 Difficulty-1 Tasks!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/5DaysInARowTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">5 Days in a Row!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/5Difficulty3TaskTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete 5 Difficulty-3 Tasks!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/5DifficultyTaskTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete 5 Difficulty-1 Tasks!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/7DaysInARowTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">7 Days in a Row!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/7Difficulty1TaskTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete 7 Difficulty-1 Tasks!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
 <div className="card m-3 col-3" >
   <img src="../images/7Difficulty3TaskTrophy.png" className="card-img-top" alt="..."  />
   <div className="card-body">
-    <h5 className="card-title">Card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 className="card-title">Complete 7 Difficulty-3 Tasks!</h5>
+    <p className="card-text">Earned: 8/3/21</p>
   </div>
 </div>
 
