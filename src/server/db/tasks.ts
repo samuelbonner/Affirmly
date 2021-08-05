@@ -34,24 +34,32 @@ const allTasksFromUser = async (id: string) =>
         [id]
     );
 
+// This works but causes a typescript error for the taskDTO.
+// If we do end up using the code below then routes/tasks.ts needs to be updated as well to target only the taskDTO instead of individual parameters.
+// // insert into tasks (userid, title, details, difficulty, priority, completed) values (?, ?, ?, ?, ?, ?)
+// // const insert = (taskDTO: {
+// //     userid: string;
+// //     title: string;
+// //     details: string;
+// //     difficulty: string;
+// //     priority: string;
+// //     completed: string;
+// // }) => Query(`INSERT INTO tasks SET ?`, [taskDTO]);
 
-// This works but causes a typescript error for the taskDTO 
-// insert into tasks (userid, title, details, difficulty, priority, completed) values (?, ?, ?, ?, ?, ?)
-// const insert = (taskDTO: {
-//     userid: string;
-//     title: string;
-//     details: string;
-//     difficulty: string;
-//     priority: string;
-//     completed: string;
-// }) => Query(`INSERT INTO tasks SET ?`, [taskDTO]);
-
-
-const insert = (userid: string, title: string, details: string, difficulty: string, priority: string, completed: string) => Query(`
+const insert = (
+    userid: string,
+    title: string,
+    details: string,
+    difficulty: string,
+    priority: string,
+    completed: string
+) =>
+    Query(
+        `
     INSERT INTO tasks (userid, title, details, difficulty, priority, completed) VALUES (?, ?, ?, ?, ?, ?)
-`, [userid, title, details, difficulty, priority, completed]);
-
-
+        `,
+        [userid, title, details, difficulty, priority, completed]
+    );
 
 const put = async (id: string, newTitle: string, newDetails: string) =>
     await Query(
@@ -60,7 +68,7 @@ const put = async (id: string, newTitle: string, newDetails: string) =>
     SET title = ?, 
     details = ?
     WHERE tasks.id = ?;
-`,
+        `,
         [newTitle, newDetails, id]
     );
 
@@ -68,7 +76,7 @@ const destroy = async (id: string) =>
     await Query(
         `
     DELETE FROM tasks WHERE tasks.id = ?;
-`,
+        `,
         [id]
     );
 
