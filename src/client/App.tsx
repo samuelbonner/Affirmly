@@ -4,7 +4,8 @@ import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 // import { useState, useEffect } from 'react';
 import Home from "./views/Home";
 import AccomplishedTasks from "./views/AccomplishedTasks";
-
+import TrophyCase from './views/TrophyCase';
+import LogIn from './views/LogIn';
 
 const App: React.FC = (props: AppProps) => {
 	return (
@@ -16,6 +17,13 @@ const App: React.FC = (props: AppProps) => {
 		  <Route exact path="/accomplishedtasks">
 		  <AccomplishedTasks />
 		  </Route>
+		  <Route exact path="/trophycase">
+		  <TrophyCase />
+		  </Route>
+		  <Route exact path="/login">
+		  <LogIn />
+		  </Route>
+
 		</Switch>
 	  </BrowserRouter>
 	);
