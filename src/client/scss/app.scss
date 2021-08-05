@@ -3,3 +3,35 @@ $theme-colors: (
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+.navbar {
+    background-color:#31326F;
+    color: #DBF6E9;
+    
+}
+
+
+.title {
+    color: #31326F;
+}
+
+.level-1 {
+    background-color: #FFD98E;
+}
+
+.level-2 {
+    background-color: #F1FFAB;
+}
+
+.level-3 {
+    background-color: #FFC93C;
+}
+
+body {
+    background-color: #DBF6E9;
+}
+
+.checkbox {
+    background-color: #31326F;
+}
