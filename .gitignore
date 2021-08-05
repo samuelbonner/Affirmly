@@ -5,6 +5,5 @@ node_modules/
 dist/
 public/js/app.js
 
-# hiding passwords for now]
+# hiding user/passwords using npm dotenv
 .env
-src/server/db/index.ts
