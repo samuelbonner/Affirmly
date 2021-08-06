@@ -6,6 +6,7 @@ import Home from "./views/Home";
 import AccomplishedTasks from "./views/AccomplishedTasks";
 import TrophyCase from './views/TrophyCase';
 import LogIn from './views/LogIn';
+import SignUp from './views/SignUp';
 
 const App: React.FC = (props: AppProps) => {
 	return (
@@ -23,6 +24,10 @@ const App: React.FC = (props: AppProps) => {
 		  <Route exact path="/login">
 		  <LogIn />
 		  </Route>
+		  <Route exact path="/signup">
+		  <SignUp />
+		  </Route>
+
 
 		</Switch>
 	  </BrowserRouter>

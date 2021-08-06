@@ -3,8 +3,7 @@ $theme-colors: (
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-<<<<<<< HEAD
-=======
+
 
 
 .navbar {
@@ -50,6 +49,15 @@ body {
     color: #DBF6E9;
     text-decoration: none;
 }
+
+.login-btn {
+    background-color: #31326F;
+    color: #DBF6E9;
+}
+.login-btn:hover {
+    background-color: #31326F;
+    color: #DBF6E9;
+}
 // body{
 //     background-image: url();
 //     // background-color: #DBF6E9;
@@ -58,4 +66,4 @@ body {
 //     // background-position: center;
 //     // min-height: 100px;
 // }
->>>>>>> f6dfa29ed7d42224dd8502ca673758d4a16fddec
+

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const LogIn = () => {
+const SignUp = () => {
 
     return (
         <>
@@ -12,6 +12,9 @@ const LogIn = () => {
 <div className="card" style={{width: 400}}>
   <img src='../images/affirmlytransparentlogo.png' className="card-img-top" alt="..."/>
   <div className="card-body">
+    {/* <div>
+      <h4 className="mx-2">Create Account</h4>
+    </div> */}
   <form>
   <div className="row mb-3">
     <label htmlFor="inputEmail3" className="col-sm-3 col-form-label">
@@ -34,15 +37,10 @@ const LogIn = () => {
   </div>
 
   <div className="text-center d-flex flex-wrap justify-content-center m-2">
-  <button type="submit" className="btn login-btn mx-2 col">Sign in</button>
+  <button type="submit" className="btn login-btn m-2 col">Sign up</button>
   </div>
 
 </form>
-<div className="ml-2 mr-4">
-  <Link to="/signup">
-  <button type="submit" className="btn login-btn m-2 col">Sign up</button>
-  </Link>
-</div>
     <p className="card-text">Affirmly is your own to-do list that rewards your efforts with positivity and encourages forming healthy habits.</p>
   </div>
 </div>
@@ -54,4 +52,4 @@ const LogIn = () => {
 
 
 
-export default LogIn
+export default SignUp;
