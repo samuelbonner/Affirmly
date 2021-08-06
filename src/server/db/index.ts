@@ -1,6 +1,8 @@
 import * as mysql from "mysql";
+import config from "../config";
 import Tasks from "./tasks";
-import config from "../config"
+import Trophies from './trophies';
+import Users from './users';
 
 // All of this info below matches the setup from mySQL Workbench code. If something needs to be changed, it must be changed in both places.
 // This is pulled from config/index.ts which references .env (which is in .gitignore to protect our sensitive info)
@@ -17,5 +19,7 @@ export const Query = (query: string, values?: Array<string | number>) => {
 };
 
 export default {
-    Tasks
+    Tasks,
+    Trophies,
+    Users
 };
