@@ -1,31 +1,99 @@
 import * as React from 'react';
-import { useState, useEffect } from 'react';
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
-/* HOOK REACT EXAMPLE */
-const App = (props: AppProps) => {
-	const [greeting, setGreeting] = useState<string>('');
+// import { useState, useEffect } from 'react';
+import Home from "./views/Home";
+import AccomplishedTasks from "./views/AccomplishedTasks";
+import TrophyCase from './views/TrophyCase';
+import LogIn from './views/LogIn';
 
-	useEffect(() => {
-		async function getGreeting() {
-			try {
-				const res = await fetch('/api/hello');
-				const greeting = await res.json();
-				setGreeting(greeting);
-			} catch (error) {
-				console.log(error);
-			}
-		}
-		getGreeting();
-	}, []);
-
+const App: React.FC = (props: AppProps) => {
 	return (
-		<main className="container my-5">
-			<h1 className="text-primary text-center">Hello {greeting}!</h1>
-		</main>
-	);
-};
+	  <BrowserRouter>
+		<Switch>
+		  <Route exact path="/">
+			<Home />
+		  </Route>
+		  <Route exact path="/accomplishedtasks">
+		  <AccomplishedTasks />
+		  </Route>
+		  <Route exact path="/trophycase">
+		  <TrophyCase />
+		  </Route>
+		  <Route exact path="/login">
+		  <LogIn />
+		  </Route>
 
-interface AppProps {}
+		</Switch>
+	  </BrowserRouter>
+	);
+  };
+  
+  interface AppProps {}
+  
+
+export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// import * as React from 'react';
+// import { useState, useEffect } from 'react';
+
+// /* HOOK REACT EXAMPLE */
+// const App = (props: AppProps) => {
+// 	const [greeting, setGreeting] = useState<string>('');
+
+// 	useEffect(() => {
+// 		async function getGreeting() {
+// 			try {
+// 				const res = await fetch('/api/hello');
+// 				const greeting = await res.json();
+// 				setGreeting(greeting);
+// 			} catch (error) {
+// 				console.log(error);
+// 			}
+// 		}
+// 		getGreeting();
+// 	}, []);
+
+// 	return (
+// 		<main className="container my-5">
+// 			<h1 className="text-primary text-center">Hello {greeting}!</h1>
+// 		</main>
+// 	);
+// };
+
+// interface AppProps {}
 
 /* CLASS REACT EXAMPLE */
 // class App extends React.Component<IAppProps, IAppState> {
@@ -61,4 +129,4 @@ interface AppProps {}
 // 	name: string;
 // }
 
-export default App;
+// export default App;

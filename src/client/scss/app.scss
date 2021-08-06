@@ -3,3 +3,59 @@ $theme-colors: (
 );
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+<<<<<<< HEAD
+=======
+
+
+.navbar {
+    background-color:#31326F;
+    color: #DBF6E9;
+    
+}
+
+
+.title {
+    color: #31326F;
+}
+
+.level-1 {
+    background-color: #FFD98E;
+}
+
+.level-2 {
+    background-color: #F1FFAB;
+}
+
+.level-3 {
+    background-color: #FFC93C;
+}
+
+body {
+    background-color: #DBF6E9;
+}
+
+.checkbox {
+    background-color: #31326F;
+}
+
+.card {
+    background-color: #9DDFD3;
+}
+
+.link {
+    color: #DBF6E9;
+}
+
+.link:hover {
+    color: #DBF6E9;
+    text-decoration: none;
+}
+// body{
+//     background-image: url();
+//     // background-color: #DBF6E9;
+//     // height: 100vh;
+//     background-size: cover; 
+//     // background-position: center;
+//     // min-height: 100px;
+// }
+>>>>>>> f6dfa29ed7d42224dd8502ca673758d4a16fddec
