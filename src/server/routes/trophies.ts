@@ -1,20 +1,14 @@
 import * as express from "express";
 import db from "../db";
 
-
 const router = express.Router();
 
-
-router.get('/:id?', async (req, res) => {
-
+router.get("/:id?", async (req, res) => {
     const id: string = req.params.id;
-    
+
     const trophy = await db.Trophies.trophyOne(id);
     res.json(trophy[0]);
-
 });
-
-
 
 // interface trophy {
 //     id?: string,

@@ -3,7 +3,6 @@ import db from "../db";
 
 const router = express.Router();
 
-
 // This get checks for an optional ID, if an ID is inserted, then it returns one task.
 // If an ID is *not* presented, it currently returns allTasks
 // This probably needs to be updated to use allTasksFromUser instead of allTasks as we get closer to front-end link-up.
@@ -30,12 +29,10 @@ router.post("/", async (req, res) => {
         // We use taskDTO and target each individual desired parameter. Inserting the object as a whole throws some typescript errors that are time-consuming.
         await db.Tasks.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
         res.send("Posted successfully");
-
     } catch (error) {
         console.log(`There was an error in router.insert in tasks.ts, specifically: ${error}`);
     }
 });
-
 
 // This PUT function updates the title and details of a task.
 // Currently the priority & difficulty are not editable features, but can easily be added below.
@@ -44,7 +41,7 @@ router.post("/", async (req, res) => {
 // We probably need a put function to update the req.body.completed at some point for when a user uses the "checkbox" on the front-end
 router.put("/:id", async (req, res) => {
     const id: string = req.params.id;
-    const newTitle : string = req.body.title;
+    const newTitle: string = req.body.title;
     const newDetails: string = req.body.details;
 
     try {

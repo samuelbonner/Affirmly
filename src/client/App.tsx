@@ -1,75 +1,40 @@
-import * as React from 'react';
+import * as React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
 // import { useState, useEffect } from 'react';
 import Home from "./views/Home";
 import AccomplishedTasks from "./views/AccomplishedTasks";
-import TrophyCase from './views/TrophyCase';
-import LogIn from './views/LogIn';
-import SignUp from './views/SignUp';
+import TrophyCase from "./views/TrophyCase";
+import LogIn from "./views/LogIn";
+import SignUp from "./views/SignUp";
 
 const App: React.FC = (props: AppProps) => {
-	return (
-	  <BrowserRouter>
-		<Switch>
-		  <Route exact path="/">
-			<Home />
-		  </Route>
-		  <Route exact path="/accomplishedtasks">
-		  <AccomplishedTasks />
-		  </Route>
-		  <Route exact path="/trophycase">
-		  <TrophyCase />
-		  </Route>
-		  <Route exact path="/login">
-		  <LogIn />
-		  </Route>
-		  <Route exact path="/signup">
-		  <SignUp />
-		  </Route>
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route>
+                <Route exact path="/accomplishedtasks">
+                    <AccomplishedTasks />
+                </Route>
+                <Route exact path="/trophycase">
+                    <TrophyCase />
+                </Route>
+                <Route exact path="/login">
+                    <LogIn />
+                </Route>
+                <Route exact path="/signup">
+                    <SignUp />
+                </Route>
+            </Switch>
+        </BrowserRouter>
+    );
+};
 
-
-		</Switch>
-	  </BrowserRouter>
-	);
-  };
-  
-  interface AppProps {}
-  
+interface AppProps {}
 
 export default App;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import * as React from 'react';
 // import { useState, useEffect } from 'react';

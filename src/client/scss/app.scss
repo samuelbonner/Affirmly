@@ -1,69 +1,65 @@
 $theme-colors: (
-    'primary': #0091ea //Covalence Blue!  :D
+    "primary": #0091ea //Covalence Blue!  :D,
 );
 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-
-
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
 .navbar {
-    background-color:#31326F;
-    color: #DBF6E9;
-    
+    background-color: #31326f;
+    color: #dbf6e9;
 }
 
-
 .title {
-    color: #31326F;
+    color: #31326f;
 }
 
 .level-1 {
-    background-color: #FFD98E;
+    background-color: #ffd98e;
 }
 
 .level-2 {
-    background-color: #F1FFAB;
+    background-color: #f1ffab;
 }
 
 .level-3 {
-    background-color: #FFC93C;
+    background-color: #ffc93c;
 }
 
 body {
-    background-color: #DBF6E9;
+    background-color: #dbf6e9;
 }
 
 .checkbox {
-    background-color: #31326F;
+    background-color: #31326f;
 }
 
 .card {
-    background-color: #9DDFD3;
+    background-color: #9ddfd3;
 }
 
 .link {
-    color: #DBF6E9;
+    color: #dbf6e9;
 }
 
 .link:hover {
-    color: #DBF6E9;
+    color: #dbf6e9;
     text-decoration: none;
 }
 
 .login-btn {
-    background-color: #31326F;
-    color: #DBF6E9;
+    background-color: #31326f;
+    color: #dbf6e9;
 }
 .login-btn:hover {
-    background-color: #31326F;
-    color: #DBF6E9;
+    background-color: #31326f;
+    color: #dbf6e9;
 }
 
 // body{
 //     background-image: url();
 //     // background-color: #DBF6E9;
 //     // height: 100vh;
-//     background-size: cover; 
+//     background-size: cover;
 //     // background-position: center;
 //     // min-height: 100px;
 // }
@@ -78,10 +74,10 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-  }
-  
-  /* The actual popup */
-  .popup .popuptext {
+}
+
+/* The actual popup */
+.popup .popuptext {
     visibility: hidden;
     width: 160px;
     background-color: #555;
@@ -94,10 +90,10 @@ body {
     bottom: 125%;
     left: 50%;
     margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -106,23 +102,31 @@ body {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class - hide and show the popup */
-  .popup .show {
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
-  }
-  
-  /* Add animation (fade in the popup) */
-  @-webkit-keyframes fadeIn {
-    from {opacity: 0;} 
-    to {opacity: 1;}
-  }
-  
-  @keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity:1 ;}
-  }
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 // #EndRegion "About Affirmly" Pop-Up on Login Page

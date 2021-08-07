@@ -35,14 +35,7 @@ const allTasksFromUser = async (id: string) =>
     );
 
 // This is the function to insert a new task for a user.
-const insert = (
-    userid: string,
-    title: string,
-    details: string,
-    difficulty: string,
-    priority: string,
-    completed: string
-) =>
+const insert = (userid: string, title: string, details: string, difficulty: string, priority: string, completed: string) =>
     Query(
         `
     INSERT INTO tasks (userid, title, details, difficulty, priority, completed) VALUES (?, ?, ?, ?, ?, ?)
@@ -62,7 +55,6 @@ const insert = (
 // //     completed: string;
 // // }) => Query(`INSERT INTO tasks SET ?`, [taskDTO]);
 
-
 // This PUT function is for editing the title or details of the task.
 // Changing priority or difficulty is currently not set up.
 const put = async (id: string, newTitle: string, newDetails: string) =>
@@ -75,7 +67,6 @@ const put = async (id: string, newTitle: string, newDetails: string) =>
         `,
         [newTitle, newDetails, id]
     );
-
 
 // This deletes a task from a user. Requires the ID of the task to be specified to the SQL query
 const destroy = async (id: string) =>
