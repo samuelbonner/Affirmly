@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
+const handleAboutPopup = () => {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+};
+
 const SignUp = () => {
 
     return (
@@ -41,8 +46,18 @@ const SignUp = () => {
   </div>
 
 </form>
-    <p className="card-text">Affirmly is your own to-do list that rewards your efforts with positivity and encourages forming healthy habits.</p>
-  </div>
+<div className="popup" onClick={handleAboutPopup} >
+                            <img
+                                src="../images/question_mark.png"
+                                alt="icon"
+                                width="40"
+                                height="40"
+                            />
+                            <span className="popuptext" id="myPopup">
+                            Affirmly is your own to-do list that rewards your efforts with positivity and encourages forming healthy habits.
+                            </span>
+                        </div>  
+</div>
 </div>
 </div>
         </>
