@@ -32,16 +32,12 @@ router.post("/", async (req, res) => {
 
 
 //Currently do not need PUT and delete
-//If we need to edit or delete user, we need to add functionality
+//If we need to edit or delete user, we need to add functionality below
 
 // router.put("/:id", async (req, res) => {
-
-
 // });
 
 // router.delete("/:id", async (req, res) => {
-
-    
 // });
 
 
