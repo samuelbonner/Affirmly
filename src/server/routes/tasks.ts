@@ -76,7 +76,7 @@ export interface ITask {
     details: string;
     difficulty: string;
     priority: string;
-    completed: string;
+    completed: number;
 }
 
 export default router;

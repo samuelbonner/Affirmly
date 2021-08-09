@@ -3,15 +3,7 @@ import type { ITask } from "../../server/routes/tasks";
 
 const TasksTable: React.FC<TasksTableProps> = ({ task }) => {
     return (
-        // <div className="m-2">
-        //     <table className="table table-bordered table-hover">
-        //         <thead>
-        //             <tr>
-        //                 <th scope="col">Completed</th>
-        //                 <th scope="col">Task</th>
-        //                 <th scope="col">Badge</th>
-        //             </tr>
-        //         </thead>
+
                 <tbody>
                     {/* Need to find a way to have a dynamically loaded className for difficulty / priority / completed
                     Need to make this entire row clickable and call a TaskDetails component (need to write & link) using the task.id
@@ -29,8 +21,6 @@ const TasksTable: React.FC<TasksTableProps> = ({ task }) => {
                         <td>bronze</td>
                     </tr>
                 </tbody>
-        //     </table>
-        // </div>
     );
 };
 
