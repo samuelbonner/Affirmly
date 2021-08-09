@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import affirmations  from '../../server/utils/affirmations';
+import { toast } from "../components/ToastManager";
 
 const Home: React.FC<IHome> = () => {
     // here will be erica's home page this was just temporary home page
+
+
     return (
         <>
             <nav className="navbar">
@@ -31,6 +35,22 @@ const Home: React.FC<IHome> = () => {
             </nav>
 
             <div className="text-center">this is the home page</div>
+            <div className="Home">
+      <header className="Home-header">
+        <button
+          onClick={() =>
+            toast.show({
+              title: "",
+              content: affirmations[Math.floor(Math.random()* affirmations.length)],
+              duration: 3000,
+            })
+          }
+        >
+          Show toast
+        </button>
+      </header>
+    </div>
+
         </>
     );
 };
