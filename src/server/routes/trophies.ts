@@ -10,7 +10,7 @@ router.get("/:id?", async (req, res) => {
     res.json(trophy[0]);
 });
 
-// interface trophy {
+// interface ITrophy {
 //     id?: string,
 //     userid: string,
 //     taskid: string,

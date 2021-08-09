@@ -10,9 +10,11 @@ router.get("/:id?", async (req, res) => {
     const id: string = req.params.id;
 
     if (id) {
+        console.log(`GET request using oneTask for task id ${id}`)
         const task = await db.Tasks.oneTask(id);
         res.json(task[0]);
     } else {
+        console.log(`GET request using allTasks`)
         const tasks = await db.Tasks.allTasks();
         res.json(tasks);
     }
