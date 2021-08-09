@@ -22,7 +22,7 @@ router.get("/:id?", async (req, res) => {
 
 router.post("/", async (req, res) => {
     // We create a variable for "task Data Transfer Object" to use below
-    const taskDTO: task = req.body;
+    const taskDTO: ITask = req.body;
     console.log(taskDTO);
 
     try {
@@ -69,7 +69,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 // These match exactly from the mySQL database setup. If something is changed in one place, it must be changed in both.
-interface task {
+export interface ITask {
     id?: string;
     userid: string;
     title: string;
