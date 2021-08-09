@@ -1,7 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import TasksTable from "../components/TasksTable";
+import type { ITask } from "../../server/routes/tasks";
 
 const AccomplishedTask = () => {
+    const [tasks, setTasks] = React.useState<ITask[]>([]);
+
+    React.useEffect(() => {
+        (async () => {
+            const fetchRes = await fetch("/api/tasks");
+            const tasks = await fetchRes.json();
+            setTasks(tasks);
+        })();
+    }, []);
+
     return (
         <>
             <nav className="navbar">
@@ -33,40 +45,26 @@ const AccomplishedTask = () => {
                 <h2 className="title m-2">Accomplished Tasks</h2>
             </div>
 
-            <div className="m-2">
-                <table className="table table-bordered table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Completed</th>
-                            <th scope="col">Task</th>
-                            <th scope="col">Badge</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="level-1">
-                            <th scope="row">
-                                <input type="checkbox" checked />
-                            </th>
-                            <td>grocery shopping</td>
-                            <td>bronze</td>
-                        </tr>
-                        <tr className="level-3">
-                            <th scope="row">
-                                <input className="checkbox" type="checkbox" checked />
-                            </th>
-                            <td>fill out job application</td>
-                            <td>gold</td>
-                        </tr>
-                        <tr className="level-2">
-                            <th scope="row">
-                                <input type="checkbox" checked />
-                            </th>
-                            <td>call parents</td>
-                            <td>silver</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <main className="container">
+                <section className="row">
+                    <div className="m-2">
+                        <table className="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Completed</th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Badge</th>
+                                </tr>
+                            </thead>
+                            {tasks.map((task) => {
+                                if (task.completed == 1) {
+                                    return <TasksTable task={task} key={`task-${task.id}`} />;
+                                }
+                            })}
+                        </table>
+                    </div>
+                </section>
+            </main>
         </>
     );
 };

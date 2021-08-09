@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
 import affirmations  from '../../server/utils/affirmations';
 import { toast } from "../components/ToastManager";
+import TasksTable from "../components/TasksTable";
+import type { ITask } from "../../server/routes/tasks";
 
 const Home: React.FC<IHome> = () => {
-    // here will be erica's home page this was just temporary home page
+    // here will be erica's home page this is just placeholder styling
 
+    const [tasks, setTasks] = React.useState<ITask[]>([]);
 
+    React.useEffect(() => {
+        (async () => {
+            const fetchRes = await fetch("/api/tasks");
+            const tasks = await fetchRes.json();
+            setTasks(tasks);
+        })();
+    }, []);
     return (
         <>
             <nav className="navbar">
@@ -50,6 +61,30 @@ const Home: React.FC<IHome> = () => {
         </button>
       </header>
     </div>
+
+
+            {/*Affirmation placeholder for dynamic Affirmation loading*/}
+
+            <main className="container">
+                <section className="row">
+                    <div className="m-2">
+                        <table className="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Completed</th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Badge</th>
+                                </tr>
+                            </thead>
+                            {tasks.map((task) => {
+                                if (task.completed == 0) {
+                                    return <TasksTable task={task} key={`task-${task.id}`} />;
+                                }
+                            })}
+                        </table>
+                    </div>
+                </section>
+            </main>
 
         </>
     );
