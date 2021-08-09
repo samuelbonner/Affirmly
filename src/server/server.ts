@@ -1,6 +1,7 @@
 import * as express from "express";
 import apiRouter from "./routes";
 import * as morgan from 'morgan';
+import * as path from 'path';
 
 
 
@@ -11,6 +12,8 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 app.use(apiRouter);
+
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')));
 
 
 
