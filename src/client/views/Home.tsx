@@ -58,7 +58,9 @@ const Home: React.FC<IHome> = () => {
                                 </tr>
                             </thead>
                             {tasks.map((task) => {
-                                return <TasksTable task={task} key={`task-${task.id}`} />;
+                                if (task.completed == 0) {
+                                    return <TasksTable task={task} key={`task-${task.id}`} />;
+                                }
                             })}
                         </table>
                     </div>
