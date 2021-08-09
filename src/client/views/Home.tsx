@@ -46,21 +46,18 @@ const Home: React.FC<IHome> = () => {
             </nav>
 
             <div className="text-center">this is the home page</div>
-            <div className="Home">
-      <header className="Home-header">
-        <button
-          onClick={() =>
+  
+
+      <div className='d-flex flex-wrap m-2 justify-content-center'>
+          <input type="checkbox" className="form-check-input" id="exampleCheck1" onClick={() => {
             toast.show({
               title: "",
               content: affirmations[Math.floor(Math.random()* affirmations.length)],
               duration: 3000,
             })
-          }
-        >
-          Show toast
-        </button>
-      </header>
-    </div>
+          }}/>
+          </div>
+   
 
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
