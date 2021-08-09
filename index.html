@@ -1,44 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AFFIRMLY</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    <header>
-        <div class="main">
-            <dir class="logo">
-                <img src="LogoA.png">
-            </dir>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav>
+      <img id="logo-img" src="LogoB.png" />
+     
+      <ul>
+        <a href="#"><i class="fa fa-home"></i>Home</a>
+        <li class="nav-list-item">
+          <a href="#">Accomplished Tasks</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Trophy Case</a>
+        </li>
+        <li class="nav-list-item">
+          <a href="#">Logout</a>
+        </li>
+      </ul>
+    </nav>
 
+    <div class="header">
+      <h1></h1>
+      <p></p>
+    </div>
 
-            <ul>
-                <li class="active"><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Login</a></li>
-                <li><a href="#">Signup</a></li>
-                <li><a href="#"><i class="fa fa-trophy"></i> Trophies</a></li>
-                <div class="sub-menu">
-                    <ul>
-               </li><a href="#">Trophy1</a>                
-                    </li><a href="#">Trophy2</a>                
-                    </ul>
-                 </div>
-                </li>
-                </ul>
-        <div class="title">
-            <h1>Random Text</h1>
-
+    <div class="container">
+      <!-- <form>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+          />
         </div>
-        <div class="button">
-            <a href="#" class="btn">SOME TEXT</a>
-            <a href="#" class="btn">SOME TEXT</a>
-            <a href="#" class="btn">SOME TEXT</a>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form> -->
 
-    </header>
-</body>
+      <form>
+        <div class="row w-100">
+         
+          <input class="form-input col-12" type="text" name="To do List" placeholder="To do List..." />
+          <input class="form-input col-12" type="text" name="To do List" placeholder="To do List..." />
+          <input class="form-input col-12" type="text" name="To do List" placeholder="To do List..." />
+        </div>
+          
+        </form>       
+    </div>
+  </body>
 </html>
