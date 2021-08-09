@@ -4,15 +4,21 @@ $theme-colors: (
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+
+//navbar
 .navbar {
     background-color: #31326f;
     color: #dbf6e9;
 }
+//end of navbar
 
+//title font color
 .title {
     color: #31326f;
 }
+//end of title font color
 
+//table task level color
 .level-1 {
     background-color: #ffd98e;
 }
@@ -24,7 +30,7 @@ $theme-colors: (
 .level-3 {
     background-color: #ffc93c;
 }
-
+// end of table task
 body {
     background-color: #dbf6e9;
 }
@@ -32,7 +38,7 @@ body {
 .checkbox {
     background-color: #31326f;
 }
-
+//card for trophies and login
 .card {
     background-color: #9ddfd3;
 }
@@ -55,14 +61,6 @@ body {
     color: #dbf6e9;
 }
 
-// body{
-//     background-image: url();
-//     // background-color: #DBF6E9;
-//     // height: 100vh;
-//     background-size: cover;
-//     // background-position: center;
-//     // min-height: 100px;
-// }
 
 // #Region "About Affirmly" Pop-Up on Login Page
 /* Popup container - can be anything you want */
@@ -130,3 +128,65 @@ body {
     }
 }
 // #EndRegion "About Affirmly" Pop-Up on Login Page
+
+//toast
+#toast-container-main {
+    position: fixed;
+    top: 120px;
+    right: 50px;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+  }
+  
+  #toast-container-main > div {
+    // background-color: rgba(0, 0, 0, 0.15);
+    background-color: #ffc93c;
+    color: black;
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    animation: slide-in 0.2s;
+    transition: all 0.3s ease;
+  }
+  
+  .toast-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @keyframes slide-in {
+    from {
+      transform: translateX(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  button {
+    background: none;
+    border: none;
+    color: black;
+    font-weight: 900;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 8px;
+  }
+  
+  button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+   
+  }
+
+  //end of toast css

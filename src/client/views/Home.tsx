@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+
+import affirmations  from '../../server/utils/affirmations';
+import { toast } from "../components/ToastManager";
 import TasksTable from "../components/TasksTable";
 import type { ITask } from "../../server/routes/tasks";
 
@@ -15,7 +18,6 @@ const Home: React.FC<IHome> = () => {
             setTasks(tasks);
         })();
     }, []);
-
     return (
         <>
             <nav className="navbar">
@@ -44,6 +46,20 @@ const Home: React.FC<IHome> = () => {
             </nav>
 
             <div className="text-center">this is the home page</div>
+  
+
+      <div className='d-flex flex-wrap m-2 justify-content-center'>
+          <input type="checkbox" className="form-check-input" id="exampleCheck1" onClick={() => {
+            toast.show({
+              title: "",
+              content: affirmations[Math.floor(Math.random()* affirmations.length)],
+              duration: 3000,
+            })
+          }}/>
+          </div>
+   
+
+
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
 
             <main className="container">
@@ -66,6 +82,7 @@ const Home: React.FC<IHome> = () => {
                     </div>
                 </section>
             </main>
+
         </>
     );
 };
