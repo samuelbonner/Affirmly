@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link, useParams } from 'react-router-dom';
-import { useHistory } from "react-router-dom";
+import { Link, useParams, useHistory } from 'react-router-dom';
 
 
 const EditTask = (props) => {
