@@ -15,7 +15,7 @@ const TrophyCase = () => {
                 </div>
                 <div>
                     <Link to="/newtask" className="link">
-                        NewTask
+                        New Task
                     </Link>
                 </div>
                 <div>

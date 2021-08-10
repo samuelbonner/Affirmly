@@ -27,7 +27,7 @@ const AccomplishedTask = () => {
                 </div>
                 <div>
                     <Link to="/newtask" className="link">
-                        NewTask
+                        New Task
                     </Link>
                 </div>
                 <div>

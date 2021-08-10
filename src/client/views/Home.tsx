@@ -33,7 +33,7 @@ const Home: React.FC<IHome> = () => {
                 </div>
                 <div>
                     <Link to="/newtask" className="link">
-                        NewTask
+                        New Task
                     </Link>
                 </div>
                 <div>
@@ -61,7 +61,7 @@ const Home: React.FC<IHome> = () => {
                     id="exampleCheck1"
                     onClick={() => {
                         toast.show({
-                            title: "",
+                            title: "Task Completed!",
                             content: affirmations[Math.floor(Math.random() * affirmations.length)],
                             duration: 15000,
                         });
