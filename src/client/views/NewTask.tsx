@@ -35,14 +35,9 @@ const NewTask = (props) => {
         <>
 
 
-            <nav className="navbar">
+<nav className="navbar">
                 <Link to="/">
-                    <img
-                        src="../images/affirmlylogotransparent.png"
-                        alt="Affirmly Logo"
-                        width="90"
-                        height="90"
-                    />
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>
                     <Link to="/accomplishedtasks" className="link">
@@ -71,12 +66,7 @@ const NewTask = (props) => {
                 </div>
                 <div>
                     3 Day Streak
-                    <img
-                        src="../images/megaphone.gif"
-                        alt="megaphone"
-                        width="100"
-                        height="100"
-                    />
+                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
             </nav>
             <div>
