@@ -31,11 +31,6 @@ const AccomplishedTask = () => {
                     </Link>
                 </div>
                 <div>
-                    <Link to="/edittask" className="link">
-                        EditTask
-                    </Link>
-                </div>
-                <div>
                     <Link to="/trophycase" className="link">
                         Trophy Case
                     </Link>
