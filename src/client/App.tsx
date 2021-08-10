@@ -14,7 +14,7 @@ const App: React.FC = (props: AppProps) => {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/">
-                    <Home />
+                    <LogIn />
                 </Route>
                 <Route exact path="/accomplishedtasks">
                     <AccomplishedTasks />
@@ -25,8 +25,8 @@ const App: React.FC = (props: AppProps) => {
                 <Route exact path="/:id/edittask">
                     <EditTask />
                 </Route>
-                <Route exact path="/login">
-                    <LogIn />
+                <Route exact path="/home">
+                    <Home />
                 </Route>
                 <Route exact path="/newtask">
                     <NewTask />

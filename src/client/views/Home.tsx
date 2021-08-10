@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import LogIn from './Login';
 import affirmations from "../../server/utils/affirmations";
 import { toast } from "../components/ToastManager";
 import TasksTable from "../components/TasksTable";
@@ -66,7 +67,7 @@ const Home: React.FC<IHome> = () => {
                     </Link>
                 </div>
                 <div>
-                    <Link to="/login" className="link">
+                    <Link to="/" className="link">
                         Logout
                     </Link>
                 </div>
