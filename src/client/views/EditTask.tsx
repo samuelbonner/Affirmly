@@ -69,7 +69,7 @@ React.useEffect(() => {
                 </div>
                 <div>
                     <Link to="/newtask" className="link">
-                        NewTask
+                        New Task
                     </Link>
                 </div>
                 <div>
@@ -98,33 +98,35 @@ React.useEffect(() => {
 
 
             {/* Task Form */}
-            <form className="newtask_form form-group border border-primary rounded shadow-lg p-3 mx-3">
+            <div className='d-flex flex-wrap justify-content-center'>
+
+            <form className="newtask_form form-group border border-primary rounded shadow-lg p-3 mx-3 d-flex row justify-content-center">
                 {/* Title Textbox */}
-                <input value={title} type="text" className="todo-input" onChange={(e) => setTitle(e.target.value)} />
+                <input value={title} type="text"  placeholder="Task Title" className="todo-input m-2 col-8" onChange={(e) => setTitle(e.target.value)} />
 
                 {/* Details Textbox */}
-                <textarea value={details} onChange={(e) => setDetails(e.target.value)} type="text" name="details" placeholder="Task Details" maxLength="550" />
+                <textarea value={details} className="col-8 m-2" onChange={(e) => setDetails(e.target.value)} type="text" name="details" placeholder="Task Details" maxLength="550" />
 
-                {/* Priority Checkbox */}
-                <div className="form-check form-switch">
-                    <input value={priority} className="form-check-input" id="flexSwitchCheckDefault" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
-                    <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
-                        Priority
-                    </label>
-                </div>
 
                 {/* Dropdown for Difficulty Level */}
-                <label>
+                <label className='my-2 col-12 text-center'>
                     Pick a difficulty level:
-                    <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+                    <select className="ml-2" value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
                         <option value="1">Difficulty Level 1</option>
                         <option value="2">Difficulty Level 2</option>
                         <option value="3">Difficulty Level 3</option>
                     </select>
                 </label>
+                {/* Priority Checkbox */}
+                <div className="form-check form-switch col-12 text-center mb-3">
+                    <label className="form-check-label mt-2" htmlFor="flexSwitchCheckDefault">
+                        Priority?
+                    </label>
+                    <input value={priority} className="form-check-input ml-2 mb-4" id="flexSwitchCheckDefault" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
+                </div>
 
                 {/* Submit Button */}
-                <button className="btn btn-warning todo-button" onClick={handleEdit}>
+                <button className="btn btn-warning todo-button mr-2" onClick={handleEdit}>
                     Edit Task
                 </button>
                 <button className="btn btn-danger todo-button" onClick={handleDelete}>
@@ -132,9 +134,9 @@ React.useEffect(() => {
                 </button>
 
             </form>
-        </>
+            </div>
 
-
+</>
 
 
     )

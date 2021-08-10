@@ -57,7 +57,7 @@ const Home: React.FC<IHome> = () => {
                 </div>
                 <div>
                     <Link to="/newtask" className="link">
-                        NewTask
+                        New Task
                     </Link>
                 </div>
                 <div>
@@ -75,6 +75,24 @@ const Home: React.FC<IHome> = () => {
                     <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
             </nav>
+
+
+            <div className="text-center">this is the home page</div>
+
+            <div className="d-flex flex-wrap m-2 justify-content-center">
+                <input
+                    type="checkbox"
+                    className="form-check-input"
+                    id="exampleCheck1"
+                    onClick={() => {
+                        toast.show({
+                            title: "Task Completed!",
+                            content: affirmations[Math.floor(Math.random() * affirmations.length)],
+                            duration: 15000,
+                        });
+                    }}
+                />
+            </div>
 
             <div className="text-center">Open Tasks</div>
 
