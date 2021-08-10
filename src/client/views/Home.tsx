@@ -11,6 +11,7 @@ const Home: React.FC<IHome> = () => {
 
     const [tasks, setTasks] = React.useState<ITask[]>([]);
 
+    // This useEffect runs once upon page load and fetches all tasks. The tasks get filtered by an if statement checking for completed(boolean) in the map function below
     React.useEffect(() => {
         (async () => {
             const fetchRes = await fetch("/api/tasks");
@@ -18,6 +19,7 @@ const Home: React.FC<IHome> = () => {
             setTasks(tasks);
         })();
     }, []);
+
     return (
         <>
             <nav className="navbar">
@@ -66,7 +68,7 @@ const Home: React.FC<IHome> = () => {
                         toast.show({
                             title: "",
                             content: affirmations[Math.floor(Math.random() * affirmations.length)],
-                            duration: 3000,
+                            duration: 15000,
                         });
                     }}
                 />
@@ -82,6 +84,7 @@ const Home: React.FC<IHome> = () => {
                                 <tr>
                                     <th scope="col">Completed</th>
                                     <th scope="col">Task</th>
+                                    <th scope="col">Edit</th>
                                     <th scope="col">Badge</th>
                                 </tr>
                             </thead>
