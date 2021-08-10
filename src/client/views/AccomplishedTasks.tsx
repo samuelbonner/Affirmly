@@ -17,7 +17,7 @@ const AccomplishedTask = () => {
     return (
         <>
             <nav className="navbar">
-                <Link to="/">
+            <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>
