@@ -31,9 +31,10 @@ const App: React.FC = (props: AppProps) => {
                 <Route exact path="/newtask">
                     <NewTask />
                 </Route>
-                <Route exact path="/edittask">
+                {/* Shouldn't need this route anymore since we use the specific /:id/edittask route above
+				<Route exact path="/edittask">
                     <EditTask />
-                </Route>
+                </Route> */}
                 <Route exact path="/signup">
                     <SignUp />
                 </Route>
