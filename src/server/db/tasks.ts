@@ -57,15 +57,18 @@ const insert = (userid: string, title: string, details: string, difficulty: stri
 
 // This PUT function is for editing the title or details of the task.
 // Changing priority or difficulty is currently not set up.
-const put = async (id: string, newTitle: string, newDetails: string) =>
+const put = async (id: string, newTitle: string, newDetails: string, newDifficulty: string, newPriority: string, newCompleted: string) =>
     await Query(
         `
     UPDATE tasks
     SET title = ?, 
-    details = ?
+    details = ?,
+    difficulty = ?,
+    priority = ?,
+    completed = ?
     WHERE tasks.id = ?;
         `,
-        [newTitle, newDetails, id]
+        [newTitle, newDetails, newDifficulty, newPriority, newCompleted, id]
     );
 
 // This deletes a task from a user. Requires the ID of the task to be specified to the SQL query
