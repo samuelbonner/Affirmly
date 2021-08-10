@@ -45,9 +45,14 @@ router.put("/:id", async (req, res) => {
     const id: string = req.params.id;
     const newTitle: string = req.body.title;
     const newDetails: string = req.body.details;
+    const newDifficulty: any = req.body.difficulty;
+    const newPriority: any = req.body.priority;
+    const newCompleted: any = req.body.completed;
+
+    console.log(id, newTitle, newDetails, newDifficulty, newPriority, newCompleted);
 
     try {
-        await db.Tasks.put(id, newTitle, newDetails);
+        await db.Tasks.put(id, newTitle, newDetails, newDifficulty, newPriority, newCompleted);
 
         res.send("Edited successfully");
     } catch (error) {
