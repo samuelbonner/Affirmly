@@ -7,10 +7,16 @@ const handleAboutPopup = () => {
 };
 
 const LogIn = () => {
+
+    // const [username, getUsername] = useState("");
+    // const [password, getPassword] = useState("");
+    
+
+
     return (
         <>
-            <Link to="/">home</Link>
-            <div className="d-flex row m-3 flex-wrap justify-content-center text-center">
+            {/* <Link to="/">home</Link> */}
+            <div className="d-flex row m-5 flex-wrap justify-content-center text-center">
                 <div className="card" style={{ width: 400 }}>
                     <img src="../images/affirmlytransparentlogo.png" className="card-img-top" alt="..." />
                     <div className="card-body">
@@ -22,7 +28,7 @@ const LogIn = () => {
                                     </span>
                                 </label>
                                 <div className="col-sm-8">
-                                    <input type="email" className="form-control" id="inputEmail3" placeholder="Email" />
+                                    <input type="text" className="form-control" id="inputName3" placeholder="Username" />
                                 </div>
                             </div>
                             <div className="row mb-2 d-flex flex-wrap">
@@ -35,9 +41,11 @@ const LogIn = () => {
                             </div>
 
                             <div className="text-center d-flex flex-wrap justify-content-center m-2">
-                                <button type="submit" className="btn login-btn mx-2 col">
-                                    Log In
-                                </button>
+                                <Link to="/home">
+                                    <button type="submit" className="btn login-btn mx-2 col">
+                                        Log In
+                                    </button>
+                                </Link>
                             </div>
                         </form>
                         <div className="ml-2 mr-4">

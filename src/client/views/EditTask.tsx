@@ -79,7 +79,7 @@ React.useEffect(() => {
                     </Link>
                 </div>
                 <div>
-                    <Link to="/login" className="link">
+                    <Link to="/" className="link">
                         Logout
                     </Link>
                 </div>
