@@ -51,7 +51,7 @@ const Home: React.FC<IHome> = () => {
       <div className='d-flex flex-wrap m-2 justify-content-center'>
           <input type="checkbox" className="form-check-input" id="exampleCheck1" onClick={() => {
             toast.show({
-              title: "",
+              title: "Task Completed!",
               content: affirmations[Math.floor(Math.random()* affirmations.length)],
               duration: 3000,
             })
