@@ -42,11 +42,6 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     </Link>
                 </div>
                 <div>
-                    <Link to="/edittask" className="link">
-                        EditTask
-                    </Link>
-                </div>
-                <div>
                     <Link to="/trophycase" className="link">
                         Trophy Case
                     </Link>

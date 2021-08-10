@@ -7,7 +7,7 @@ const TasksTable: React.FC<TasksTableProps> = ({ task }) => {
         <tbody>
             <tr className={`level-${task.difficulty}`}>
                 <th scope="row">
-                    <input className="checkbox" type="checkbox" checked />
+                    <input className="checkbox" type="checkbox" />
                 </th>
                 <td>{task.title}</td>
                 <td>
