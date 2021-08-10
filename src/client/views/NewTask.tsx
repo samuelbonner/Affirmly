@@ -1,48 +1,35 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
+const NewTask: React.FC<NewTaskProps> = (props) => {
+    // These useStates are all for the Task creation + POST functionality
 
-const NewTask = (props) => {
+    const [title, setTitle] = React.useState("");
+    const [details, setDetails] = React.useState("");
+    const [difficulty, setDifficulty] = React.useState("1");
+    const [priority, setPriority] = React.useState("0");
+    const [completed, setCompleted] = React.useState("0");
 
+    const history = useHistory();
 
-
-
-    const [input, setInput] = useState('')
-
-    const inputRef = useRef(null)
-    useEffect(() => {
-        inputRef.current.focus()
-    })
-
-
-
-
-
-    const handleChange = e => {
-        setInput(e.target.value)
-    }
-
-
-    const handleSubmit = e => {
+    const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        props.onSubmit({
-            id: Math.floor(Math.random() * 10000),
-            text: input
+        await fetch("/api/tasks", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ userid: 1, title, details, difficulty, priority, completed }),
         });
-        setInput('');
+        history.push("/");
     };
+
     return (
         <>
-
-
             <nav className="navbar">
                 <Link to="/">
-                    <img
-                        src="../images/affirmlylogotransparent.png"
-                        alt="Affirmly Logo"
-                        width="90"
-                        height="90"
-                    />
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>
                     <Link to="/accomplishedtasks" className="link">
@@ -71,26 +58,49 @@ const NewTask = (props) => {
                 </div>
                 <div>
                     3 Day Streak
-                    <img
-                        src="../images/megaphone.gif"
-                        alt="megaphone"
-                        width="100"
-                        height="100"
-                    />
+                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
             </nav>
+
             <div>
                 <h2 className="title m-2"> New Tasks</h2>
             </div>
-            <form className='todo-form' onSubmit={handleSubmit}>
-                <input type='text' placeholder='New Task' value={input} name='text' className='todo-input' onChange={handleChange} ref={inputRef} />
-                <button className='todo-button'>Submit</button>
+
+            {/* Task Form */}
+            <form className="newtask_form form-group border border-primary rounded shadow-lg p-3 mx-3">
+                {/* Title Textbox */}
+                <input value={title} type="text" placeholder="Task Title" className="todo-input" onChange={(e) => setTitle(e.target.value)} />
+
+                {/* Details Textbox */}
+                <textarea value={details} onChange={(e) => setDetails(e.target.value)} type="text" name="details" placeholder="Task Details" maxLength="550" />
+
+                {/* Priority Checkbox */}
+                <div className="form-check form-switch">
+                    <input value={priority} className="form-check-input" id="flexSwitchCheckDefault" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
+                    <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
+                        Priority
+                    </label>
+                </div>
+
+                {/* Dropdown for Difficulty Level */}
+                <label>
+                    Pick a difficulty level:
+                    <select value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
+                        <option value="1">Difficulty Level 1</option>
+                        <option value="2">Difficulty Level 2</option>
+                        <option value="3">Difficulty Level 3</option>
+                    </select>
+                </label>
+
+                {/* Submit Button */}
+                <button className="btn btn-primary todo-button" onClick={handleSubmit}>
+                    Add Task
+                </button>
             </form>
-            </>
+        </>
+    );
+};
 
+interface NewTaskProps {}
 
-
-            )
-}
-
-            export default NewTask;
+export default NewTask;
