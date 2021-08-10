@@ -1,13 +1,14 @@
 import * as React from "react";
 import { BrowserRouter, Route, Switch, Link } from "react-router-dom";
 
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 import Home from "./views/Home";
 import AccomplishedTasks from "./views/AccomplishedTasks";
 import TrophyCase from "./views/TrophyCase";
 import LogIn from "./views/LogIn";
 import SignUp from "./views/SignUp";
-
+import NewTask from "./views/NewTask";
+import EditTask from "./views/EditTask";
 const App: React.FC = (props: AppProps) => {
     return (
         <BrowserRouter>
@@ -21,9 +22,19 @@ const App: React.FC = (props: AppProps) => {
                 <Route exact path="/trophycase">
                     <TrophyCase />
                 </Route>
+                <Route exact path="/:id/edittask">
+                    <EditTask />
+                </Route>
                 <Route exact path="/login">
                     <LogIn />
                 </Route>
+                <Route exact path="/newtask">
+                    <NewTask />
+                </Route>
+                {/* Shouldn't need this route anymore since we use the specific /:id/edittask route above
+				<Route exact path="/edittask">
+                    <EditTask />
+                </Route> */}
                 <Route exact path="/signup">
                     <SignUp />
                 </Route>
@@ -35,41 +46,3 @@ const App: React.FC = (props: AppProps) => {
 interface AppProps {}
 
 export default App;
-
-// import * as React from 'react';
-// import { useState, useEffect } from 'react';
-
-// /* HOOK REACT EXAMPLE */
-// const App = (props: AppProps) => {
-// 	const [greeting, setGreeting] = useState<string>('');
-
-// 	useEffect(() => {
-// 		async function getGreeting() {
-// 			try {
-// 				const res = await fetch('/api/hello');
-// 				const greeting = await res.json();
-// 				setGreeting(greeting);
-// 			} catch (error) {
-// 				console.log(error);
-// 			}
-// 		}
-// 		getGreeting();
-// 	}, []);
-
-// 	return (
-// 		<main className="container my-5">
-// 			<h1 className="text-primary text-center">Hello {greeting}!</h1>
-// 		</main>
-// 	);
-// };
-
-// interface AppProps {}
-
-
-// export interface IAppProps {}
-
-// export interface IAppState {
-// 	name: string;
-// }
-
-// export default App;

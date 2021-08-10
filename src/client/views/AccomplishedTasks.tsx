@@ -20,10 +20,14 @@ const AccomplishedTask = () => {
                 <Link to="/">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
-
                 <div>
                     <Link to="/accomplishedtasks" className="link">
                         Accomplished Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/newtask" className="link">
+                        NewTask
                     </Link>
                 </div>
                 <div>

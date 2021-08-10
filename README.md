@@ -26,5 +26,5 @@
 * `React` for Frontend
 * `Node` / `Express.js` for Backend
     * NPM Packages:
-        * `bootstrap`, `css-loader`, `dotenv`, `express`, `mysql`, `node-sass`, `react`, `react-dom`, `sass-loader`, `style-loader`, `ts-loader`, `typescript`, `webpack`
+        * `bootstrap`, `css-loader`, `dotenv`, `express`, `morgan`, `mysql`, `node-sass`, `react`, `react-dom`, `sass-loader`, `style-loader`, `ts-loader`, `typescript`, `webpack`
 * `mySQL` for Database management

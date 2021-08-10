@@ -1,9 +1,8 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,
+    "primary": #0091ea //Covalence Blue!  :D,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
-
 
 //navbar
 .navbar {
@@ -60,7 +59,6 @@ body {
     background-color: #31326f;
     color: #dbf6e9;
 }
-
 
 // #Region "About Affirmly" Pop-Up on Login Page
 /* Popup container - can be anything you want */
@@ -129,7 +127,7 @@ body {
 }
 // #EndRegion "About Affirmly" Pop-Up on Login Page
 
-//toast
+//#Region for toast
 #toast-container-main {
     position: fixed;
     top: 120px;
@@ -138,9 +136,9 @@ body {
     display: flex;
     flex-direction: column;
     width: 250px;
-  }
-  
-  #toast-container-main > div {
+}
+
+#toast-container-main > div {
     // background-color: rgba(0, 0, 0, 0.15);
     background-color: #ffc93c;
     color: black;
@@ -153,27 +151,27 @@ body {
     padding: 12px;
     animation: slide-in 0.2s;
     transition: all 0.3s ease;
-  }
-  
-  .toast-header {
+}
+
+.toast-header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
-  
-  @keyframes slide-in {
+}
+
+@keyframes slide-in {
     from {
-      transform: translateX(30px);
-      opacity: 0;
+        transform: translateX(30px);
+        opacity: 0;
     }
     to {
-      transform: translateX(0px);
-      opacity: 1;
+        transform: translateX(0px);
+        opacity: 1;
     }
-  }
-  
-  button {
+}
+
+button {
     background: none;
     border: none;
     color: black;
@@ -182,11 +180,59 @@ body {
     cursor: pointer;
     border-radius: 8px;
     padding: 4px 8px;
-  }
-  
-  button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-   
-  }
+}
 
-  //end of toast css
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+//#EndRegion for toast css
+
+//#Region NewTask & EditTask form
+.newtask_form input{
+    height: 35px;
+    border: 2px solid #631ebc;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    transition: .2s;
+}
+.newtask_form input:hover{
+    border: 2px solid #ff8080;
+}
+
+.newtask_form input::placeholder{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.newtask_form textarea {
+    height: 150px;
+    border: 2px solid #631ebc;
+    resize: none;
+    padding-left: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.newtask_form textarea::placeholder{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.newtask_form textarea:hover{
+     border: 2px solid #ff8080;
+}
+.newtask_form input[type="submit"]{
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #631ebc;
+    text-transform: uppercase;
+    width: 50%;
+    transition: .2s;
+}
+.newtask_form input[type="submit"]:hover{
+    font-size: 16px;
+    border: 0;
+}
+
+//#EndRegion of NewTask & EditTask form
