@@ -1,5 +1,238 @@
 $theme-colors: (
-    'primary': #0091ea //Covalence Blue!  :D
+    "primary": #0091ea //Covalence Blue!  :D,,
 );
 
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//navbar
+.navbar {
+    background-color: #31326f;
+    color: #dbf6e9;
+}
+//end of navbar
+
+//title font color
+.title {
+    color: #31326f;
+}
+//end of title font color
+
+//table task level color
+.level-1 {
+    background-color: #ffd98e;
+}
+
+.level-2 {
+    background-color: #f1ffab;
+}
+
+.level-3 {
+    background-color: #ffc93c;
+}
+// end of table task
+body {
+    background-color: #dbf6e9;
+}
+
+.checkbox {
+    background-color: #31326f;
+}
+//card for trophies and login
+.card {
+    background-color: #9ddfd3;
+}
+
+.link {
+    color: #dbf6e9;
+}
+
+.link:hover {
+    color: #dbf6e9;
+    text-decoration: none;
+}
+
+.login-btn {
+    background-color: #31326f;
+    color: #dbf6e9;
+}
+.login-btn:hover {
+    background-color: #31326f;
+    color: #dbf6e9;
+}
+
+// #Region "About Affirmly" Pop-Up on Login Page
+/* Popup container - can be anything you want */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+// #EndRegion "About Affirmly" Pop-Up on Login Page
+
+//#Region for toast
+#toast-container-main {
+    position: fixed;
+    top: 120px;
+    right: 50px;
+    z-index: 9999999;
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#toast-container-main > div {
+    // background-color: rgba(0, 0, 0, 0.15);
+    background-color: #ffc93c;
+    color: black;
+    width: 100%;
+    margin-bottom: 10px;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 12px;
+    animation: slide-in 0.2s;
+    transition: all 0.3s ease;
+}
+
+.toast-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+button {
+    background: none;
+    border: none;
+    color: black;
+    font-weight: 900;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 4px 8px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+//#EndRegion for toast css
+
+//#Region NewTask & EditTask form
+.newtask_form input{
+    height: 35px;
+    border: 2px solid #631ebc;
+    padding-left: 5px;
+    margin-bottom: 10px;
+    transition: .2s;
+}
+.newtask_form input:hover{
+    border: 2px solid #ff8080;
+}
+
+.newtask_form input::placeholder{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+.newtask_form textarea {
+    height: 150px;
+    border: 2px solid #631ebc;
+    resize: none;
+    padding-left: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.newtask_form textarea::placeholder{
+    text-transform: uppercase;
+    font-size: 12px;
+}
+.newtask_form textarea:hover{
+     border: 2px solid #ff8080;
+}
+.newtask_form input[type="submit"]{
+    height: 40px;
+    font-size: 14px;
+    color: #fff;
+    background: #631ebc;
+    text-transform: uppercase;
+    width: 50%;
+    transition: .2s;
+}
+.newtask_form input[type="submit"]:hover{
+    font-size: 16px;
+    border: 0;
+}
+
+//#EndRegion of NewTask & EditTask form

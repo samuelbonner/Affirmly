@@ -3,7 +3,6 @@ import db from "../db";
 
 const router = express.Router();
 
-
 // This get checks for an optional ID, if an ID is inserted, then it returns one task.
 // If an ID is *not* presented, it currently returns allTasks
 // This probably needs to be updated to use allTasksFromUser instead of allTasks as we get closer to front-end link-up.
@@ -11,9 +10,11 @@ router.get("/:id?", async (req, res) => {
     const id: string = req.params.id;
 
     if (id) {
+        console.log(`GET request using oneTask for task id ${id}`)
         const task = await db.Tasks.oneTask(id);
         res.json(task[0]);
     } else {
+        console.log(`GET request using allTasks`)
         const tasks = await db.Tasks.allTasks();
         res.json(tasks);
     }
@@ -21,7 +22,7 @@ router.get("/:id?", async (req, res) => {
 
 router.post("/", async (req, res) => {
     // We create a variable for "task Data Transfer Object" to use below
-    const taskDTO: task = req.body;
+    const taskDTO: ITask = req.body;
     console.log(taskDTO);
 
     try {
@@ -30,12 +31,10 @@ router.post("/", async (req, res) => {
         // We use taskDTO and target each individual desired parameter. Inserting the object as a whole throws some typescript errors that are time-consuming.
         await db.Tasks.insert(taskDTO.userid, taskDTO.title, taskDTO.details, taskDTO.difficulty, taskDTO.priority, taskDTO.completed);
         res.send("Posted successfully");
-
     } catch (error) {
         console.log(`There was an error in router.insert in tasks.ts, specifically: ${error}`);
     }
 });
-
 
 // This PUT function updates the title and details of a task.
 // Currently the priority & difficulty are not editable features, but can easily be added below.
@@ -44,7 +43,7 @@ router.post("/", async (req, res) => {
 // We probably need a put function to update the req.body.completed at some point for when a user uses the "checkbox" on the front-end
 router.put("/:id", async (req, res) => {
     const id: string = req.params.id;
-    const newTitle : string = req.body.title;
+    const newTitle: string = req.body.title;
     const newDetails: string = req.body.details;
 
     try {
@@ -70,14 +69,14 @@ router.delete("/:id", async (req, res) => {
 });
 
 // These match exactly from the mySQL database setup. If something is changed in one place, it must be changed in both.
-interface task {
+export interface ITask {
     id?: string;
     userid: string;
     title: string;
     details: string;
     difficulty: string;
     priority: string;
-    completed: string;
+    completed: number;
 }
 
 export default router;
