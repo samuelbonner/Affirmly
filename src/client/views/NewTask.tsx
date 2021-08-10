@@ -22,13 +22,13 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
             },
             body: JSON.stringify({ userid: 1, title, details, difficulty, priority, completed }),
         });
-        history.push("/");
+        history.push("/home");
     };
 
     return (
         <>
             <nav className="navbar">
-                <Link to="/">
+            <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>

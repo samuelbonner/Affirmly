@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import LogIn from './Login';
+import LogIn from "./Login";
 import affirmations from "../../server/utils/affirmations";
 import { toast } from "../components/ToastManager";
 import TasksTable from "../components/TasksTable";
@@ -41,14 +41,14 @@ const Home: React.FC<IHome> = () => {
 
         // setTimeout is currently not necessary, but we can uncomment the below lines incase there is a timing error with fetchTasks on completing a checkmark
         // setTimeout(() => {
-            fetchTasks();
+        fetchTasks();
         // }, 500);
     };
 
     return (
         <>
             <nav className="navbar">
-                <Link to="/">
+                <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>
@@ -77,23 +77,6 @@ const Home: React.FC<IHome> = () => {
                 </div>
             </nav>
 
-
-            <div className="text-center">this is the home page</div>
-
-            <div className="d-flex flex-wrap m-2 justify-content-center">
-                <input
-                    type="checkbox"
-                    className="form-check-input"
-                    id="exampleCheck1"
-                    onClick={() => {
-                        toast.show({
-                            title: "Task Completed!",
-                            content: affirmations[Math.floor(Math.random() * affirmations.length)],
-                            duration: 15000,
-                        });
-                    }}
-                />
-            </div>
 
             <div className="text-center">Open Tasks</div>
 
