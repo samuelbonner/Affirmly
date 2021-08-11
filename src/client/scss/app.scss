@@ -1,31 +1,53 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,,
+    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
 
+//default Font Style
+* {
+    font-family: "Handlee", cursive;
+    font-weight: bold !important;
+}
+
 //navbar
 .navbar {
-    background-color: #31326f;
+    justify-content: space-around;
+    background-color: #27276e;
     color: #dbf6e9;
+
+    &:hover {
+        border-radius: 3px;
+        transition: 0.3s;
+        box-shadow: 8px 8px 8px rgb(39, 39, 39);
+        background-color: #31326f;
+    }
 }
 //end of navbar
 
 //footer
 .footer {
-    background-color: #12123b;
+    background-color: #27276e;
     color: #dbf6e9;
     position: relative;
-  display: flex;
-  flex-wrap: wrap; 
-  align-items: center;
-  justify-content: space-around;
-  border-top-left-radius: -16px;
-  border-top-right-radius: -16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: auto;
+    opacity: .1;
+
+    &:hover {
+        opacity: 1;
+        transition: 0.3s;
+        box-shadow: 0px 0px 15px rgb(39, 39, 39);
+        background-color: #31326f;
+    }
 }
 
 .inc {
-    font-family: 'Merienda', cursive;
+    font-family: "Merienda", cursive;
+    color: #00ccff;
 }
 //end of footer
 
@@ -57,6 +79,11 @@ body {
 .tasks-div {
     background-color: #c4d8ce;
     border-radius: 8px;
+
+    &:hover {
+        transition: 0.3s;
+        box-shadow: 0px 0px 15px rgb(39, 39, 39);
+    }
 }
 
 .checkbox {
@@ -214,18 +241,18 @@ button:hover {
 //#EndRegion for toast css
 
 //#Region NewTask & EditTask form
-.newtask_form input{
+.newtask_form input {
     height: 35px;
     border: 2px solid #631ebc;
     padding-left: 5px;
     margin-bottom: 10px;
-    transition: .2s;
+    transition: 0.2s;
 }
-.newtask_form input:hover{
+.newtask_form input:hover {
     border: 2px solid #ff8080;
 }
 
-.newtask_form input::placeholder{
+.newtask_form input::placeholder {
     text-transform: uppercase;
     font-size: 12px;
 }
@@ -239,23 +266,23 @@ button:hover {
     margin-bottom: 10px;
 }
 
-.newtask_form textarea::placeholder{
+.newtask_form textarea::placeholder {
     text-transform: uppercase;
     font-size: 12px;
 }
-.newtask_form textarea:hover{
-     border: 2px solid #ff8080;
+.newtask_form textarea:hover {
+    border: 2px solid #ff8080;
 }
-.newtask_form input[type="submit"]{
+.newtask_form input[type="submit"] {
     height: 40px;
     font-size: 14px;
     color: #fff;
     background: #631ebc;
     text-transform: uppercase;
     width: 50%;
-    transition: .2s;
+    transition: 0.2s;
 }
-.newtask_form input[type="submit"]:hover{
+.newtask_form input[type="submit"]:hover {
     font-size: 16px;
     border: 0;
 }
@@ -264,6 +291,5 @@ button:hover {
 //     background-color: #31326f;
 //     color: white;
 // }
-
 
 //#EndRegion of NewTask & EditTask form

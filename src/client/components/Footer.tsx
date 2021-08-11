@@ -6,12 +6,12 @@ const Footer = () => {
     return (
 
         <>
-            <div className="footer position-fixed py-3 fixed-bottom">
+            <div className="footer position-fixed fixed-bottom py-3">
                 <Link to="/home">
-                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
+                    <img src="../images/newaffirmlylogo.svg" alt="Affirmly Logo" width="140" height="120" />
                 </Link>
                 <div>
-                    <a href="https://icons8.com/icon/44019/linkedin">
+                    <a target="_blank" href="https://icons8.com/icon/44019/linkedin">
                         <img src="https://img.icons8.com/nolan/64/linkedin.png" />
                     </a>
                     {/* <Link to="/accomplishedtasks" className="link">
@@ -19,7 +19,7 @@ const Footer = () => {
                     </Link> */}
                 </div>
                 <div>
-                    <a href="https://icons8.com/icon/44003/facebook">
+                    <a target="_blank" href="https://icons8.com/icon/44003/facebook">
                         <img src="https://img.icons8.com/nolan/64/facebook.png" />
                     </a>
                     {/* <Link to="/newtask" className="link">
@@ -27,7 +27,7 @@ const Footer = () => {
                     </Link> */}
                 </div>
                 <div>
-                    <a href="https://icons8.com/icon/bYzsf9Bmocst/twitter">
+                    <a target="_blank" href="https://icons8.com/icon/bYzsf9Bmocst/twitter">
                         <img src="https://img.icons8.com/nolan/64/twitter.png" />
                     </a>
                     {/* <Link to="/trophycase" className="link">
@@ -35,7 +35,7 @@ const Footer = () => {
                     </Link> */}
                 </div>
                 <div>
-                    <a href="https://icons8.com/icon/43625/instagram-logo">
+                    <a target="_blank" href="https://icons8.com/icon/43625/instagram-logo">
                         <img src="https://img.icons8.com/nolan/64/instagram-new.png" />
                     </a>
                     {/* <Link to="/" className="link">
@@ -43,7 +43,7 @@ const Footer = () => {
                     </Link> */}
                 </div>
                 <div>
-                    <a href="https://icons8.com/icon/Uehg4gyVyrUo/copyright">
+                    <a target="_blank" href="https://icons8.com/icon/Uehg4gyVyrUo/copyright">
                         <div className="copyright d-inline-flex"><img src="https://img.icons8.com/nolan/18/copyright.png" className="align-self-start"/>
                         <span className="inc" style={{fontSize: "38px"}}>Affirmly, Inc</span>
                         </div>
