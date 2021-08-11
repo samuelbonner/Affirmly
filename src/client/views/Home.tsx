@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import LogIn from './Login';
+
+import LogIn from './Login';//This is currently the homepath, so this isn't called in the Navbar anymore
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import affirmations from "../../server/utils/affirmations";
@@ -61,10 +62,10 @@ const Home: React.FC<IHome> = () => {
                         <table className="table table-bordered table-hover rounded-lg">
                             <thead>
                                 <tr>
-                                    <th scope="col">Completed</th>
-                                    <th scope="col">Task</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Badge</th>
+                                    <th scope="col" className="text-center">Completed</th>
+                                    <th scope="col" className="text-center">Task</th>
+                                    <th scope="col" className="text-center">Edit</th>
+                                    <th scope="col" className="text-center">Priority</th>
                                 </tr>
                             </thead>
                             {tasks.map((task) => {
