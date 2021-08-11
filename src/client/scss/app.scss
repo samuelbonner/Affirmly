@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,
+    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -15,6 +15,10 @@ $theme-colors: (
     justify-content: space-around;
     background-color: #27276e;
     color: #dbf6e9;
+<<<<<<< HEAD
+    font-size: larger;
+=======
+>>>>>>> 0f825bbccd2e1c3ea4320139213aa93468ba1c8a
 
     &:hover {
         border-radius: 3px;
@@ -140,6 +144,7 @@ body {
     background-image: linear-gradient(to bottom right, rgb(64, 173, 224), lightgreen);
 }
 
+//Tasks table
 .tasks-div {
     background-color: #c4d8ce;
     border-radius: 8px;
@@ -152,13 +157,23 @@ body {
     }
 }
 
+//End of tasks table
+
 .checkbox {
     background-color: #31326f;
 }
 //card for trophies and login
 .card {
     background-color: #9ddfd3;
+<<<<<<< HEAD
+}
+
+.link {
+    color: #dbf6e9;
+    font-size: larger;
+=======
     box-shadow: 0px 0px 5px rgb(39, 39, 39);
+>>>>>>> 0f825bbccd2e1c3ea4320139213aa93468ba1c8a
 
     &:hover {
         box-shadow: 8px 8px 15px rgb(39, 39, 39);
