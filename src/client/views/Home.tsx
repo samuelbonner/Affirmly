@@ -102,8 +102,8 @@ const Home: React.FC<IHome> = () => {
 
             <main className="container">
                 <section className="row">
-                    <div className="tasks-div m-2 px-0 rounded-lg">
-                        <table className="table table-bordered table-hover">
+                    <div className="tasks-div m-2 px-0 rounded border-0">
+                        <table className="table table-bordered table-hover rounded-lg">
                             <thead>
                                 <tr>
                                     <th scope="col">Completed</th>

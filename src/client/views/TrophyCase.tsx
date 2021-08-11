@@ -116,18 +116,18 @@ const TrophyCase = () => {
 
       </div>
 
-      <Footer />
 
-                <div className="card m-3 col-3">
-                    <img src="../images/7Difficulty3TaskTrophy.png" className="card-img-top" alt="..." />
-                    <div className="card-body">
-                        <h5 className="card-title">Complete 7 Difficulty-3 Tasks!</h5>
-                        <p className="card-text">Earned: 8/3/21</p>
-                    </div>
-                </div>
-            </div>
-        </>
-    );
+      <div className="card m-3 col-3">
+        <img src="../images/7Difficulty3TaskTrophy.png" className="card-img-top" alt="..." />
+        <div className="card-body">
+          <h5 className="card-title">Complete 7 Difficulty-3 Tasks!</h5>
+          <p className="card-text">Earned: 8/3/21</p>
+        </div>
+      </div>
+
+      <Footer />
+    </>
+  );
 };
 
 export default TrophyCase;

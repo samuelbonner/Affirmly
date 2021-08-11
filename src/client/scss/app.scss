@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,
+    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -35,20 +35,63 @@ $theme-colors: (
     align-items: center;
     justify-content: space-around;
     height: auto;
-    opacity: .1;
+    opacity: 0.05;
 
     &:hover {
         opacity: 1;
-        transition: 0.3s;
+        transition: 0.7s;
         box-shadow: 0px 0px 15px rgb(39, 39, 39);
         background-color: #31326f;
     }
+}
+
+.footer-logo:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 90px 90px;
+    background-color: #383980;
+}
+
+.linkedin:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 12px 12px;
+    background-color: #383980;
+}
+
+.facebook:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 12px 12px;
+    background-color: #383980;
+}
+
+.twitter:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 90px 90px;
+    background-color: #383980;
+}
+
+.instagram:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 12px 12px;
+    background-color: #383980;
+}
+
+.affirmly-div:hover {
+    transition: 0.7s;
+    box-shadow: 8px 8px 15px rgb(39, 39, 39);
+    border-radius: 15px 15px;
+    background-color: #383980;
 }
 
 .inc {
     font-family: "Merienda", cursive;
     color: #00ccff;
 }
+
 //end of footer
 
 //title font color
@@ -82,7 +125,7 @@ body {
 
     &:hover {
         transition: 0.3s;
-        box-shadow: 0px 0px 15px rgb(39, 39, 39);
+        box-shadow: 8px 8px 15px rgb(39, 39, 39);
     }
 }
 
