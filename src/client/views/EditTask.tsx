@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+
 
 
 
@@ -54,7 +56,9 @@ const EditTask = (props) => {
 
     return (
         <>
-            <nav className="navbar sticky-top">
+			<Navbar />
+            
+            {/* <nav className="navbar sticky-top">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
                 </Link>
@@ -82,7 +86,8 @@ const EditTask = (props) => {
                     3 Day Streak
                     <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
-            </nav>
+            </nav> */}
+
             <div>
                 <h2 className="title m-2"> Edit Tasks</h2>
             </div>

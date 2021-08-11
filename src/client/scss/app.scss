@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,
+    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -35,9 +35,11 @@ $theme-colors: (
     align-items: center;
     justify-content: space-around;
     height: auto;
-    opacity: 0.05;
+    opacity: 0;
+    z-index: 1;
 
     &:hover {
+        z-index: 3;
         opacity: 1;
         transition: 0.7s;
         box-shadow: 0px 0px 15px rgb(39, 39, 39);
@@ -114,18 +116,20 @@ $theme-colors: (
 }
 // end of table task
 body {
-    // background-color: url(../../../public/images/A2.png);
-    // background-repeat: no-repeat;
     background-color: #dbf6e9;
+    // background-image: linear-gradient(to bottom right, turquoise, yellow);
+    background-image: linear-gradient(to bottom right, turquoise, lightgreen);
 }
 
 .tasks-div {
     background-color: #c4d8ce;
     border-radius: 8px;
+    box-shadow: 0px 0px 5px rgb(39, 39, 39);
+    z-index: 2;
 
     &:hover {
-        transition: 0.3s;
         box-shadow: 8px 8px 15px rgb(39, 39, 39);
+        transition: 0.3s;
     }
 }
 
