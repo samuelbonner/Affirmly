@@ -1,5 +1,8 @@
-import React, { useState, useEffect, useRef } from "react";
-import { Link, useParams, useHistory } from "react-router-dom";
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, useParams, useHistory } from 'react-router-dom';
+import Footer from '../components/Footer';
+
+
 
 const EditTask = (props) => {
     const { id } = useParams();
@@ -51,27 +54,27 @@ const EditTask = (props) => {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar sticky-top">
                 <Link to="/home">
-                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
                 </Link>
                 <div>
-                    <Link to="/accomplishedtasks" className="link">
+                    <Link to="/accomplishedtasks" className="link text-decoration-none">
                         Accomplished Task
                     </Link>
                 </div>
                 <div>
-                    <Link to="/newtask" className="link">
+                    <Link to="/newtask" className="link text-decoration-none">
                         New Task
                     </Link>
                 </div>
                 <div>
-                    <Link to="/trophycase" className="link">
+                    <Link to="/trophycase" className="link text-decoration-none">
                         Trophy Case
                     </Link>
                 </div>
                 <div>
-                    <Link to="/" className="link">
+                    <Link to="/" className="link text-decoration-none">
                         Logout
                     </Link>
                 </div>
@@ -119,6 +122,7 @@ const EditTask = (props) => {
                     </button>
                 </form>
             </div>
+            <Footer />
         </>
     );
 };

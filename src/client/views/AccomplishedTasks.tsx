@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import TasksTable from "../components/TasksTable";
 import type { ITask } from "../../server/routes/tasks";
+import Footer from '../components/Footer';
+
 
 const AccomplishedTask = () => {
     const [tasks, setTasks] = React.useState<ITask[]>([]);
@@ -16,27 +18,27 @@ const AccomplishedTask = () => {
 
     return (
         <>
-            <nav className="navbar">
-            <Link to="/home">
-                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
+            <nav className="navbar sticky-top">
+                <Link to="/home">
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
                 </Link>
                 <div>
-                    <Link to="/accomplishedtasks" className="link">
+                    <Link to="/accomplishedtasks" className="link text-decoration-none">
                         Accomplished Task
                     </Link>
                 </div>
                 <div>
-                    <Link to="/newtask" className="link">
+                    <Link to="/newtask" className="link text-decoration-none">
                         New Task
                     </Link>
                 </div>
                 <div>
-                    <Link to="/trophycase" className="link">
+                    <Link to="/trophycase" className="link text-decoration-none">
                         Trophy Case
                     </Link>
                 </div>
                 <div>
-                    <Link to="/" className="link">
+                    <Link to="/" className="link text-decoration-none">
                         Logout
                     </Link>
                 </div>
@@ -69,6 +71,9 @@ const AccomplishedTask = () => {
                     </div>
                 </section>
             </main>
+
+            <Footer />
+
         </>
     );
 };
