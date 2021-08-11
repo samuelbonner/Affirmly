@@ -57,10 +57,10 @@ const AccomplishedTask = () => {
                         <table className="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col">Completed</th>
-                                    <th scope="col">Task</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Priority</th>
+                                    <th scope="col" className="text-center">Completed</th>
+                                    <th scope="col" className="text-center">Task</th>
+                                    <th scope="col" className="text-center">Edit</th>
+                                    <th scope="col" className="text-center">Priority</th>
                                 </tr>
                             </thead>
                             {tasks.map((task) => {

@@ -12,23 +12,34 @@ const TasksTable: React.FC<TasksTableProps> = (props) => {
         } else {
             return null
         }
-    };    
+    };
+
+    const CheckBoxLogic = (checkboxProp) => {
+        if (checkboxProp == 1) {
+            return                     <input className="checkbox" type="checkbox" checked onChange={() => props.handleCompleteCheck(props.task.id, props.task.title, props.task.details, props.task.difficulty, props.task.priority)} />
+        } else {
+            return <input className="checkbox" type="checkbox" onChange={() => props.handleCompleteCheck(props.task.id, props.task.title, props.task.details, props.task.difficulty, props.task.priority)} />
+        }
+
+
+    }
 
     const history = useHistory();
 
     // Write an IF / ELSE statement to check for completed and only show the empty checkboxes if the props.task.completed = 0
     return (
         <tbody>
-            <tr className={`level-${props.task.difficulty}`}>
+            <tr className={`level-${props.task.difficulty} text-center`}>
                 <th scope="row">
-                    <input className="checkbox" type="checkbox" onChange={() => props.handleCompleteCheck(props.task.id, props.task.title, props.task.details, props.task.difficulty, props.task.priority)} />
+                    {/* <input className="checkbox" type="checkbox" onChange={() => props.handleCompleteCheck(props.task.id, props.task.title, props.task.details, props.task.difficulty, props.task.priority)} /> */}
+                    {CheckBoxLogic(props.task.completed)}
                 </th>
-                <td>{props.task.title}</td>
-                <td>
+                <td className="text-left">{props.task.title}</td>
+                <td className="text-center">
                     <Link to={`/${props.task.id}/edittask`}>Edit</Link>
                 </td>
                 {/* Need a way to dynamically check for task difficulty then return the appropriate trophy-in-progress for the below td */}
-                <td>
+                <td className="text-center">
                     {PriorityFlag(props.task.priority)}
                 </td>
             </tr>
