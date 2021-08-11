@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
+
 const handleAboutPopup = () => {
     var popup = document.getElementById("myPopup");
     popup.classList.toggle("show");
@@ -8,7 +9,7 @@ const handleAboutPopup = () => {
 
 const LogIn = () => {
 
-    // const [username, getUsername] = useState("");
+    const [username, setUsername] = useState("");
     // const [password, getPassword] = useState("");
     
 
@@ -17,7 +18,7 @@ const LogIn = () => {
         <>
             {/* <Link to="/">home</Link> */}
             <div className="d-flex row m-5 flex-wrap justify-content-center text-center">
-                <div className="card" style={{ width: 400 }}>
+                <div className="card" style={{ width: 400}}>
                     <img src="../images/affirmlytransparentlogo.png" className="card-img-top" alt="..." />
                     <div className="card-body">
                         <form>
@@ -28,7 +29,7 @@ const LogIn = () => {
                                     </span>
                                 </label>
                                 <div className="col-sm-8">
-                                    <input type="text" className="form-control" id="inputName3" placeholder="Username" />
+                                    <input type="text" className="form-control" id="inputName3" placeholder="Username"/>
                                 </div>
                             </div>
                             <div className="row mb-2 d-flex flex-wrap">

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import TasksTable from "../components/TasksTable";
 import type { ITask } from "../../server/routes/tasks";
+import Footer from '../components/Footer';
+
 
 const AccomplishedTask = () => {
     const [tasks, setTasks] = React.useState<ITask[]>([]);
@@ -17,7 +19,7 @@ const AccomplishedTask = () => {
     return (
         <>
             <nav className="navbar">
-                <Link to="/">
+                <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>
@@ -69,6 +71,9 @@ const AccomplishedTask = () => {
                     </div>
                 </section>
             </main>
+
+            <Footer />
+
         </>
     );
 };

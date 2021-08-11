@@ -11,6 +11,24 @@ $theme-colors: (
 }
 //end of navbar
 
+//footer
+.footer {
+    background-color: #12123b;
+    color: #dbf6e9;
+    position: relative;
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: space-around;
+  border-top-left-radius: -16px;
+  border-top-right-radius: -16px;
+}
+
+.inc {
+    font-family: 'Merienda', cursive;
+}
+//end of footer
+
 //title font color
 .title {
     color: #31326f;
@@ -31,7 +49,14 @@ $theme-colors: (
 }
 // end of table task
 body {
+    // background-color: url(../../../public/images/A2.png);
+    // background-repeat: no-repeat;
     background-color: #dbf6e9;
+}
+
+.tasks-div {
+    background-color: #c4d8ce;
+    border-radius: 8px;
 }
 
 .checkbox {

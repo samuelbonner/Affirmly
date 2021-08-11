@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import LogIn from './Login';
+import Footer from '../components/Footer';
 import affirmations from "../../server/utils/affirmations";
 import { toast } from "../components/ToastManager";
 import TasksTable from "../components/TasksTable";
@@ -47,8 +48,8 @@ const Home: React.FC<IHome> = () => {
 
     return (
         <>
-            <nav className="navbar">
-                <Link to="/">
+            <nav className="navbar sticky-top">
+                <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
                 <div>
@@ -101,7 +102,7 @@ const Home: React.FC<IHome> = () => {
 
             <main className="container">
                 <section className="row">
-                    <div className="m-2">
+                    <div className="tasks-div m-2 px-0 shadow-lg rounded-lg">
                         <table className="table table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -120,6 +121,40 @@ const Home: React.FC<IHome> = () => {
                     </div>
                 </section>
             </main>
+            
+            <Footer />
+
+            {/* Leaving commented code below just incase */}
+
+            {/* <div className="footer position-fixed py-3 fixed-bottom">
+                <Link to="/home">
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
+                </Link>
+                <div>
+                    <Link to="/accomplishedtasks" className="link">
+                        Accomplished Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/newtask" className="link">
+                        New Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/trophycase" className="link">
+                        Trophy Case
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/" className="link">
+                        Logout
+                    </Link>
+                </div>
+                <div>
+                    3 Day Streak
+                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
+                </div>
+            </div> */}
         </>
     );
 };
