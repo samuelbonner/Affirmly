@@ -90,7 +90,7 @@ const Home: React.FC<IHome> = () => {
                 </h3>
                 </div>
             
-            <div className="text-center mt-3"><h3><strong>Welcome, Affirmly!</strong></h3></div>
+            <div className="text-center mt-3"><h4><strong>Open Tasks</strong></h4></div>
 
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
