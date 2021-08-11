@@ -1,10 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
-
-
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const NewTask: React.FC<NewTaskProps> = (props) => {
     // These useStates are all for the Task creation + POST functionality
@@ -35,12 +33,10 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
 
             <div>
                 <h2 className="title m-4"> New Tasks</h2>
-
             </div>
 
-
             {/* Task Form */}
-            <div className='d-flex flex-wrap justify-content-center'>
+            <div className="d-flex flex-wrap justify-content-center">
                 <form className="newtask_form form-group border border-primary rounded shadow-lg p-3 mx-3 d-flex row justify-content-center">
                     {/* Title Textbox */}
                     {/* <div className='d-flex flex-wrap'> */}
@@ -50,9 +46,8 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     {/* Details Textbox */}
                     <textarea value={details} className="col-8 m-2" onChange={(e) => setDetails(e.target.value)} type="text" name="details" placeholder="Task Details" maxLength="550" />
 
-
                     {/* Dropdown for Difficulty Level */}
-                    <label className='my-2 col-12 text-center'>
+                    <label className="my-2 col-12 text-center">
                         Pick a difficulty level:
                         <select className="ml-2" value={difficulty} onChange={(e) => setDifficulty(e.target.value)}>
                             <option value="1">Difficulty Level 1</option>
@@ -74,22 +69,25 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     {/* id="flexSwitchCheckDefault" */}
                     {/* htmlFor="flexSwitchCheckDefault" */}
                     {/* Submit Button */}
-                    <div className='d-flex flex-wrap justify-content-center row'>
 
-                        <button className="btn btn-primary todo-button text-center mt-2 col-3" onClick={handleSubmit}>
-                            Add Task
-                        </button>
+                    <div className="d-flex flex-wrap justify-content-center row">
+                        <div className="row">
+                            <button className="btn btn-primary todo-button text-center mt-2" onClick={handleSubmit}>
+                                {/* Scrapped classNames:  col-3 */}
+                                Add Task
+                            </button>
+                        </div>
+
                     </div>
                     {/* </div> */}
                 </form>
             </div>
 
             <Footer />
-
         </>
     );
 };
 
-interface NewTaskProps { }
+interface NewTaskProps {}
 
 export default NewTask;
