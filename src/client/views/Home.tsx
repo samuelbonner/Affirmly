@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-
-import LogIn from './Login';//This is currently the homepath, so this isn't called in the Navbar anymore
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import affirmations from "../../server/utils/affirmations";
 import { toast } from "../components/ToastManager";
 import TasksTable from "../components/TasksTable";
 import type { ITask } from "../../server/routes/tasks";
 
 const Home: React.FC<IHome> = () => {
-    // here will be erica's home page this is just placeholder styling
-
     const [tasks, setTasks] = React.useState<ITask[]>([]);
 
     // This useEffect runs once upon page load and fetches all tasks. The tasks get filtered by an if statement checking for completed(boolean) in the map function below
@@ -52,54 +47,15 @@ const Home: React.FC<IHome> = () => {
         <>
             <Navbar />
 
-
-            {/* <nav className="navbar sticky-top">
-                <Link to="/home">
-                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
-                </Link>
-                <div>
-                    <Link to="/accomplishedtasks" className="link text-decoration-none">
-                        Accomplished Task
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/newtask" className="link text-decoration-none">
-                        New Task
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/trophycase" className="link text-decoration-none">
-                        Trophy Case
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/" className="link text-decoration-none">
-                        Logout
-                    </Link>
-                </div>
-                <div>
-                    3 Day Streak
-                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
-                </div>
-            </nav> */}
-
-
-
-           
-
             <div className="text-center m-4">
-                <h3>
-                    Welcome, Affirmly!
-                </h3>
+                <h3>Welcome, Affirmly!</h3>
+            </div>
 
-                </div>
-
-            
-            <div className="title text-center mt-3"><h2><strong>Open Tasks</strong></h2></div>
-
-
-
-            {/*Affirmation placeholder for dynamic Affirmation loading*/}
+            <div className="title text-center mt-3">
+                <h2>
+                    <strong>Open Tasks</strong>
+                </h2>
+            </div>
 
             <main className="container">
                 <section className="row">
@@ -107,10 +63,18 @@ const Home: React.FC<IHome> = () => {
                         <table className="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col" className="text-center">Completed</th>
-                                    <th scope="col" className="text-center">Task</th>
-                                    <th scope="col" className="text-center">Edit</th>
-                                    <th scope="col" className="text-center">Priority</th>
+                                    <th scope="col" className="text-center">
+                                        Completed
+                                    </th>
+                                    <th scope="col" className="text-center">
+                                        Task
+                                    </th>
+                                    <th scope="col" className="text-center">
+                                        Edit
+                                    </th>
+                                    <th scope="col" className="text-center">
+                                        Priority
+                                    </th>
                                 </tr>
                             </thead>
                             {tasks.map((task) => {
@@ -124,11 +88,10 @@ const Home: React.FC<IHome> = () => {
             </main>
 
             <Footer />
-
         </>
     );
 };
 
-interface IHome { }
+interface IHome {}
 
 export default Home;
