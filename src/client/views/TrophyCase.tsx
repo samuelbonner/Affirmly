@@ -9,43 +9,14 @@ const TrophyCase = () => {
 	return (
 		<>
 			<Navbar />
-			{/* <nav className="navbar sticky-top">
-				<Link to="/home">
-					<img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
-				</Link>
-				<div>
-					<Link to="/accomplishedtasks" className="link text-decoration-none">
-						Accomplished Task
-					</Link>
-				</div>
-				<div>
-					<Link to="/newtask" className="link text-decoration-none">
-						New Task
-					</Link>
-				</div>
-				<div>
-					<Link to="/trophycase" className="link text-decoration-none">
-						Trophy Case
-					</Link>
-				</div>
-				<div>
-					<Link to="/" className="link text-decoration-none">
-						Logout
-					</Link>
-				</div>
-				<div>
-					3 Day Streak
-					<img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
-				</div>
-			</nav> */}
 
 			<div>
-				<h2 className="title m-3">Trophy Case</h2>
+				<h2 className="title m-3">Your Trophy Case</h2>
 			</div>
 
 			<div className='d-flex row m-3 flex-wrap justify-content-center'>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/3DaysInARowTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete Tasks 3 Days in a Row!</h5>
@@ -53,7 +24,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/3Difficulty3Trophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete 3 Difficulty-3 Tasks!</h5>
@@ -61,7 +32,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/3DifficultyTaskTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete 3 Difficulty-1 Tasks!</h5>
@@ -69,7 +40,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/5DaysInARowTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">5 Days in a Row!</h5>
@@ -77,7 +48,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/5Difficulty3TaskTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete 5 Difficulty-3 Tasks!</h5>
@@ -85,7 +56,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/5DifficultyTaskTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete 5 Difficulty-1 Tasks!</h5>
@@ -93,7 +64,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/7DaysInARowTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">7 Days in a Row!</h5>
@@ -101,7 +72,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/7Difficulty1TaskTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete 7 Difficulty-1 Tasks!</h5>
@@ -109,7 +80,7 @@ const TrophyCase = () => {
 					</div>
 				</div>
 
-				<div className="card m-3 col-3" >
+				<div className="card m-3 col-3" id="trophy-card">
 					<img src="../images/7Difficulty3TaskTrophy.png" className="card-img-top" alt="..." />
 					<div className="card-body">
 						<h5 className="card-title">Complete 7 Difficulty-3 Tasks!</h5>

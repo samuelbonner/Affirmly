@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import LogIn from './Login';
+
+import LogIn from './Login';//This is currently the homepath, so this isn't called in the Navbar anymore
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import affirmations from "../../server/utils/affirmations";
@@ -50,6 +51,7 @@ const Home: React.FC<IHome> = () => {
     return (
         <>
             <Navbar />
+
             {/* <nav className="navbar sticky-top">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
@@ -87,19 +89,22 @@ const Home: React.FC<IHome> = () => {
                 Welcome, Affirmly!
                 </h3>
                 </div>
+            
+            <div className="text-center mt-3"><h3><strong>Welcome, Affirmly!</strong></h3></div>
+
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
 
             <main className="container">
                 <section className="row">
-                    <div className="tasks-div m-2 px-0 rounded border-0">
+                    <div className="tasks-div m-2 mb-5 px-0 rounded border-0">
                         <table className="table table-bordered table-hover rounded-lg">
                             <thead>
                                 <tr>
-                                    <th scope="col">Completed</th>
-                                    <th scope="col">Task</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Badge</th>
+                                    <th scope="col" className="text-center">Completed</th>
+                                    <th scope="col" className="text-center">Task</th>
+                                    <th scope="col" className="text-center">Edit</th>
+                                    <th scope="col" className="text-center">Priority</th>
                                 </tr>
                             </thead>
                             {tasks.map((task) => {

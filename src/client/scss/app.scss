@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,
+    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -24,6 +24,25 @@ $theme-colors: (
         transition: 0.3s;
         box-shadow: 8px 8px 8px rgb(39, 39, 39);
     }
+}
+
+.nav-link {
+    color: #dbf6e9;
+
+    &:hover {
+        color: #dbf6e9;
+        text-decoration: none;
+        transition: 0.1s;
+        font-size: 20px;
+        text-shadow: #fc0 1px 0 10px;
+    }
+}
+
+.streak-text:hover {
+    transition: 0.1s;
+    font-size: 20px;
+    cursor: default;
+    text-shadow: rgb(255, 0, 21) 1px 0 10px;
 }
 //end of navbar
 
@@ -122,7 +141,9 @@ $theme-colors: (
 body {
     // background-color: #dbf6e9;
     // background-image: linear-gradient(to bottom right, turquoise, yellow);
+
     background-image: linear-gradient(to bottom right, turquoise, lightgreen);
+    background-image: linear-gradient(to bottom right, rgb(64, 173, 224), lightgreen);
 
 }
 
@@ -144,6 +165,7 @@ body {
 //card for trophies and login
 .card {
     background-color: #9ddfd3;
+
 }
 
 .link {
@@ -151,9 +173,13 @@ body {
 font-size: larger;
 }
 
-.link:hover {
-    color: #dbf6e9;
-    text-decoration: none;
+    box-shadow: 0px 0px 5px rgb(39, 39, 39);
+
+
+    &:hover {
+        box-shadow: 8px 8px 15px rgb(39, 39, 39);
+        transition: 0.3s;
+    }
 }
 
 .login-btn {
