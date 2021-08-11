@@ -106,20 +106,23 @@ const EditTask = (props) => {
                         </select>
                     </label>
                     {/* Priority Checkbox */}
-                    <div className="form-check form-switch col-12 text-center mb-3">
-                        <label className="form-check-label mt-2" htmlFor="flexSwitchCheckDefault">
+                    <div className="form-check col-4 text-center">
+                        <label className="form-check-label" htmlFor="exampleCheck1">
                             Priority?
+                        <input value={priority} className="form-check-input" id="exampleCheck1" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
                         </label>
-                        <input value={priority} className="form-check-input ml-2 mb-4" id="flexSwitchCheckDefault" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
                     </div>
 
                     {/* Submit Button */}
-                    <button className="btn btn-warning todo-button mr-2" onClick={handleEdit}>
+                    <div className='d-flex flex-wrap justify-content-center row'>
+
+                    <button className="btn btn-warning todo-button edit-btn col-2" onClick={handleEdit}>
                         Edit Task
                     </button>
-                    <button className="btn btn-danger todo-button" onClick={handleDelete}>
+                    <button className="btn btn-danger todo-button delete-btn col-2" onClick={handleDelete}>
                         Delete Task
                     </button>
+                    </div>
                 </form>
             </div>
             <Footer />

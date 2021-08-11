@@ -24,7 +24,7 @@ const SignUp = () => {
                             <div className="row mb-3">
                                 <label htmlFor="inputEmail3" className="col-sm-3 col-form-label">
                                     <span>
-                                        <img src="../images/icon.png" alt="icon" width="40" height="30" />
+                                        <img src="../images/icon.png" alt="icon" width="30" height="30" />
                                     </span>
                                 </label>
                                 <div className="col-sm-8">
@@ -34,7 +34,7 @@ const SignUp = () => {
                             <div className="row mb-3">
                                 <label htmlFor="inputEmail3" className="col-sm-3 col-form-label">
                                     <span>
-                                        <img src="../images/icon.png" alt="icon" width="40" height="30" />
+                                        <img src="../images/mail.png" alt="icon" width="40" height="30" />
                                     </span>
                                 </label>
                                 <div className="col-sm-8">
