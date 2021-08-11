@@ -8,6 +8,7 @@ const TasksTable: React.FC<TasksTableProps> = (props) => {
 
     const history = useHistory();
 
+    // Write an IF / ELSE statement to check for completed and only show the empty checkboxes if the props.task.completed = 0
     return (
         <tbody>
             <tr className={`level-${props.task.difficulty}`}>

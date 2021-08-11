@@ -78,7 +78,7 @@ const Home: React.FC<IHome> = () => {
             </nav>
 
 
-            <div className="text-center">Open Tasks</div>
+            <div className="text-center">Welcome, Affirmly!</div>
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
 
