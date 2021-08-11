@@ -58,36 +58,6 @@ const EditTask = (props) => {
         <>
 			<Navbar />
             
-            {/* <nav className="navbar sticky-top">
-                <Link to="/home">
-                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
-                </Link>
-                <div>
-                    <Link to="/accomplishedtasks" className="link text-decoration-none">
-                        Accomplished Task
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/newtask" className="link text-decoration-none">
-                        New Task
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/trophycase" className="link text-decoration-none">
-                        Trophy Case
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/" className="link text-decoration-none">
-                        Logout
-                    </Link>
-                </div>
-                <div>
-                    3 Day Streak
-                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
-                </div>
-            </nav> */}
-
             <div>
                 <h2 className="title m-2"> Edit Tasks</h2>
             </div>
