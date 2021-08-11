@@ -69,6 +69,7 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     {/* id="flexSwitchCheckDefault" */}
                     {/* htmlFor="flexSwitchCheckDefault" */}
                     {/* Submit Button */}
+
                     <div className="d-flex flex-wrap justify-content-center row">
                         <div className="row">
                             <button className="btn btn-primary todo-button text-center mt-2" onClick={handleSubmit}>
@@ -76,6 +77,7 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                                 Add Task
                             </button>
                         </div>
+
                     </div>
                     {/* </div> */}
                 </form>
