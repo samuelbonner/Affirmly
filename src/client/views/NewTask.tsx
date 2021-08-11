@@ -93,17 +93,23 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
 
                     {/* Priority Checkbox */}
 
-                    <div className="form-check row text-center justify-content-center">
-                        <input value={priority} className="form-check-input ml-1 mb-4" id="defaultCheck1" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
-                        <label className="d-inline-flex form-check-label my-2" htmlFor="flexSwitchCheckDefault">
+                    <div className="form-check col-4 text-center">
+                        <label className="form-check-label" htmlFor="exampleCheck1">
                             Priority?
+                        <input value={priority} className="form-check-input" id="exampleCheck1" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
                         </label>
                     </div>
 
+                    {/* previous id and htmlfor on checkbox ignore */}
+  {/* id="flexSwitchCheckDefault" */}
+  {/* htmlFor="flexSwitchCheckDefault" */}
                     {/* Submit Button */}
-                    <button className="btn btn-primary todo-button text-center mt-2" onClick={handleSubmit}>
+                    <div className='d-flex flex-wrap justify-content-center row'>
+
+                    <button className="btn btn-primary todo-button text-center mt-2 col-3" onClick={handleSubmit}>
                         Add Task
                     </button>
+                    </div>
                     {/* </div> */}
                 </form>
             </div>
