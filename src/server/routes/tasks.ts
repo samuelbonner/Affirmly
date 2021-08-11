@@ -79,8 +79,8 @@ export interface ITask {
     userid: string;
     title: string;
     details: string;
-    difficulty: string;
-    priority: string;
+    difficulty: number;
+    priority: number;
     completed: number;
 }
 

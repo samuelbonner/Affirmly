@@ -59,7 +59,8 @@ const AccomplishedTask = () => {
                                 <tr>
                                     <th scope="col">Completed</th>
                                     <th scope="col">Task</th>
-                                    <th scope="col">Badge</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Priority</th>
                                 </tr>
                             </thead>
                             {tasks.map((task) => {
