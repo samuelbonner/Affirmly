@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+
 
 
 const NewTask: React.FC<NewTaskProps> = (props) => {
@@ -29,7 +31,9 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
 
     return (
         <>
-            <nav className="navbar sticky-top">
+			<Navbar />
+            
+            {/* <nav className="navbar sticky-top">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
                 </Link>
@@ -57,7 +61,7 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     3 Day Streak
                     <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
-            </nav>
+            </nav> */}
 
             <div>
                 <h2 className="title m-4"> New Tasks</h2>
