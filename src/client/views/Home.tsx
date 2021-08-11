@@ -84,11 +84,7 @@ const Home: React.FC<IHome> = () => {
 
 
 
-            <div className="text-center m-4">
-                <h3>
-                Welcome, Affirmly!
-                </h3>
-                </div>
+           
             
             <div className="text-center mt-3"><h3><strong>Welcome, Affirmly!</strong></h3></div>
 
