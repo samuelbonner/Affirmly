@@ -28,7 +28,7 @@ const AccomplishedTask = () => {
 
             <main className="container">
                 <section className="row">
-                    <div className="m-2">
+                    <div className="tasks-div m-2 mb-5 px-0">
                         <table className="table table-bordered table-hover">
                             <thead>
                                 <tr>
