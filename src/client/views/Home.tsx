@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import LogIn from "./Login";
+import LogIn from './Login';
+import Footer from '../components/Footer';
 import affirmations from "../../server/utils/affirmations";
 import { toast } from "../components/ToastManager";
 import TasksTable from "../components/TasksTable";
@@ -47,7 +48,85 @@ const Home: React.FC<IHome> = () => {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar sticky-top">
+                <Link to="/home">
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
+                </Link>
+                <div>
+                    <Link to="/accomplishedtasks" className="link text-decoration-none">
+                        Accomplished Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/newtask" className="link text-decoration-none">
+                        New Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/trophycase" className="link text-decoration-none">
+                        Trophy Case
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/" className="link text-decoration-none">
+                        Logout
+                    </Link>
+                </div>
+                <div>
+                    3 Day Streak
+                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
+                </div>
+            </nav>
+
+
+            <div className="text-center mt-3"><h3>Welcome, Affirmly</h3></div>
+
+            <div className="d-flex flex-wrap m-2 justify-content-center">
+                <input
+                    type="checkbox"
+                    className="form-check-input"
+                    id="exampleCheck1"
+                    onClick={() => {
+                        toast.show({
+                            title: "Task Completed!",
+                            content: affirmations[Math.floor(Math.random() * affirmations.length)],
+                            duration: 15000,
+                        });
+                    }}
+                />
+            </div>
+
+            <div className="text-center">Open Tasks</div>
+
+            {/*Affirmation placeholder for dynamic Affirmation loading*/}
+
+            <main className="container">
+                <section className="row">
+                    <div className="tasks-div m-2 px-0 rounded border-0">
+                        <table className="table table-bordered table-hover rounded-lg">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Completed</th>
+                                    <th scope="col">Task</th>
+                                    <th scope="col">Edit</th>
+                                    <th scope="col">Badge</th>
+                                </tr>
+                            </thead>
+                            {tasks.map((task) => {
+                                if (task.completed == 0) {
+                                    return <TasksTable task={task} key={`task-${task.id}`} handleCompleteCheck={handleCompleteCheck} />;
+                                }
+                            })}
+                        </table>
+                    </div>
+                </section>
+            </main>
+            
+            <Footer />
+
+            {/* Leaving commented code below just incase */}
+
+            {/* <div className="footer position-fixed py-3 fixed-bottom">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
                 </Link>
@@ -75,34 +154,7 @@ const Home: React.FC<IHome> = () => {
                     3 Day Streak
                     <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
-            </nav>
-
-
-            <div className="text-center">Open Tasks</div>
-
-            {/*Affirmation placeholder for dynamic Affirmation loading*/}
-
-            <main className="container">
-                <section className="row">
-                    <div className="m-2">
-                        <table className="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Completed</th>
-                                    <th scope="col">Task</th>
-                                    <th scope="col">Edit</th>
-                                    <th scope="col">Badge</th>
-                                </tr>
-                            </thead>
-                            {tasks.map((task) => {
-                                if (task.completed == 0) {
-                                    return <TasksTable task={task} key={`task-${task.id}`} handleCompleteCheck={handleCompleteCheck} />;
-                                }
-                            })}
-                        </table>
-                    </div>
-                </section>
-            </main>
+            </div> */}
         </>
     );
 };
