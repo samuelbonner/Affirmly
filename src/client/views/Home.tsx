@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import LogIn from './Login';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import affirmations from "../../server/utils/affirmations";
 import { toast } from "../components/ToastManager";
@@ -48,7 +49,8 @@ const Home: React.FC<IHome> = () => {
 
     return (
         <>
-            <nav className="navbar sticky-top">
+            <Navbar />
+            {/* <nav className="navbar sticky-top">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
                 </Link>
@@ -76,7 +78,7 @@ const Home: React.FC<IHome> = () => {
                     3 Day Streak
                     <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
-            </nav>
+            </nav> */}
 
 
 
@@ -105,7 +107,7 @@ const Home: React.FC<IHome> = () => {
                     </div>
                 </section>
             </main>
-            
+
             <Footer />
 
             {/* Leaving commented code below just incase */}
@@ -143,6 +145,6 @@ const Home: React.FC<IHome> = () => {
     );
 };
 
-interface IHome {}
+interface IHome { }
 
 export default Home;
