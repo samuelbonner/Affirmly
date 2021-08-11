@@ -31,8 +31,8 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
 
     return (
         <>
-			<Navbar />
-            
+            <Navbar />
+
             <div>
                 <h2 className="title m-4"> New Tasks</h2>
 
@@ -66,19 +66,19 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     <div className="form-check col-4 text-center">
                         <label className="form-check-label" htmlFor="exampleCheck1">
                             Priority?
-                        <input value={priority} className="form-check-input" id="exampleCheck1" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
+                            <input value={priority} className="form-check-input" id="exampleCheck1" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
                         </label>
                     </div>
 
                     {/* previous id and htmlfor on checkbox ignore */}
-  {/* id="flexSwitchCheckDefault" */}
-  {/* htmlFor="flexSwitchCheckDefault" */}
+                    {/* id="flexSwitchCheckDefault" */}
+                    {/* htmlFor="flexSwitchCheckDefault" */}
                     {/* Submit Button */}
                     <div className='d-flex flex-wrap justify-content-center row'>
 
-                    <button className="btn btn-primary todo-button text-center mt-2 col-3" onClick={handleSubmit}>
-                        Add Task
-                    </button>
+                        <button className="btn btn-primary todo-button text-center mt-2 col-3" onClick={handleSubmit}>
+                            Add Task
+                        </button>
                     </div>
                     {/* </div> */}
                 </form>
