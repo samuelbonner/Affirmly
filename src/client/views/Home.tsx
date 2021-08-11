@@ -52,6 +52,7 @@ const Home: React.FC<IHome> = () => {
         <>
             <Navbar />
 
+
             {/* <nav className="navbar sticky-top">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
@@ -85,16 +86,25 @@ const Home: React.FC<IHome> = () => {
 
 
            
+
+            <div className="text-center m-4">
+                <h3>
+                    Welcome, Affirmly!
+                </h3>
+
+                </div>
+
             
-            <div className="text-center mt-3"><h3><strong>Welcome, Affirmly!</strong></h3></div>
+            <div className="title text-center mt-3"><h2><strong>Open Tasks</strong></h2></div>
+
 
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
 
             <main className="container">
                 <section className="row">
-                    <div className="tasks-div m-2 mb-5 px-0 rounded border-0">
-                        <table className="table table-bordered table-hover rounded-lg">
+                    <div className="tasks-div m-2 mb-5 px-0 ">
+                        <table className="table table-bordered table-hover">
                             <thead>
                                 <tr>
                                     <th scope="col" className="text-center">Completed</th>
@@ -115,37 +125,6 @@ const Home: React.FC<IHome> = () => {
 
             <Footer />
 
-            {/* Leaving commented code below just incase */}
-
-            {/* <div className="footer position-fixed py-3 fixed-bottom">
-                <Link to="/home">
-                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="90" height="90" />
-                </Link>
-                <div>
-                    <Link to="/accomplishedtasks" className="link">
-                        Accomplished Task
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/newtask" className="link">
-                        New Task
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/trophycase" className="link">
-                        Trophy Case
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/" className="link">
-                        Logout
-                    </Link>
-                </div>
-                <div>
-                    3 Day Streak
-                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
-                </div>
-            </div> */}
         </>
     );
 };
