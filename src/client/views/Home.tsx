@@ -59,7 +59,7 @@ const Home: React.FC<IHome> = () => {
 
                 </div>
             
-            <div className="text-center mt-3"><h4><strong>Open Tasks</strong></h4></div>
+            <div className="title text-center mt-3"><h2><strong>Open Tasks</strong></h2></div>
 
 
 

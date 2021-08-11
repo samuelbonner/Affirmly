@@ -11,7 +11,7 @@ const TrophyCase = () => {
 			<Navbar />
 
 			<div>
-				<h2 className="title m-3">Your Trophy Case</h2>
+				<h2 className="title m-3 text-center">Your Trophy Case</h2>
 			</div>
 
 			<div className='d-flex row m-3 flex-wrap justify-content-center'>

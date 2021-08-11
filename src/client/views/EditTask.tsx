@@ -59,7 +59,7 @@ const EditTask = (props) => {
 			<Navbar />
             
             <div>
-                <h2 className="title m-2"> Edit Tasks</h2>
+                <h2 className="title m-3 text-center"> Edit Tasks</h2>
             </div>
 
             {/* Task Form */}

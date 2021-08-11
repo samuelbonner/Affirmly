@@ -41,7 +41,7 @@ const Navbar = () => {
                     </Link>
                 </div>
                 <div className="streak-text">
-                    3 Day Streak
+                    8 Day Streak
                     <img src="../images/megaphone.gif" alt="megaphone" width="120" height="120" />
                 </div>
             </nav>
