@@ -42,7 +42,7 @@ const Home: React.FC<IHome> = () => {
 
         // setTimeout is currently not necessary, but we can uncomment the below lines incase there is a timing error with fetchTasks on completing a checkmark
         // setTimeout(() => {
-            fetchTasks();
+        fetchTasks();
         // }, 500);
     };
 
