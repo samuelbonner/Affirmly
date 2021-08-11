@@ -6,6 +6,14 @@ import { toast } from "../components/ToastManager";
 
 const TasksTable: React.FC<TasksTableProps> = (props) => {
 
+    const PriorityFlag = (flagProp: number) => {
+        if (flagProp == 1) {
+            return <img src="../images/flag.png" alt="" width="20" height="20" />
+        } else {
+            return null
+        }
+    };    
+
     const history = useHistory();
 
     // Write an IF / ELSE statement to check for completed and only show the empty checkboxes if the props.task.completed = 0
@@ -20,7 +28,9 @@ const TasksTable: React.FC<TasksTableProps> = (props) => {
                     <Link to={`/${props.task.id}/edittask`}>Edit</Link>
                 </td>
                 {/* Need a way to dynamically check for task difficulty then return the appropriate trophy-in-progress for the below td */}
-                <td>bronze</td>
+                <td>
+                    {PriorityFlag(props.task.priority)}
+                </td>
             </tr>
         </tbody>
     );
