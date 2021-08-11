@@ -13,14 +13,16 @@ $theme-colors: (
 //navbar
 .navbar {
     justify-content: space-around;
-    background-color: #27276e;
+    background-color: none;
     color: #dbf6e9;
+    font-size: larger;
+
+
 
     &:hover {
         border-radius: 3px;
         transition: 0.3s;
         box-shadow: 8px 8px 8px rgb(39, 39, 39);
-        background-color: #31326f;
     }
 }
 //end of navbar
@@ -44,6 +46,7 @@ $theme-colors: (
         transition: 0.7s;
         box-shadow: 0px 0px 15px rgb(39, 39, 39);
         background-color: #31326f;
+
     }
 }
 
@@ -99,6 +102,7 @@ $theme-colors: (
 //title font color
 .title {
     color: #31326f;
+    text-align: center;
 }
 //end of title font color
 
@@ -116,9 +120,10 @@ $theme-colors: (
 }
 // end of table task
 body {
-    background-color: #dbf6e9;
+    // background-color: #dbf6e9;
     // background-image: linear-gradient(to bottom right, turquoise, yellow);
     background-image: linear-gradient(to bottom right, turquoise, lightgreen);
+
 }
 
 .tasks-div {
@@ -143,6 +148,7 @@ body {
 
 .link {
     color: #dbf6e9;
+font-size: larger;
 }
 
 .link:hover {
