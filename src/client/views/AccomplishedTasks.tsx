@@ -23,7 +23,7 @@ const AccomplishedTask = () => {
 			<Navbar />
 
             <div>
-                <h2 className="title m-2">Accomplished Tasks</h2>
+                <h2 className="title m-3 text-center">Accomplished Tasks</h2>
             </div>
 
             <main className="container">

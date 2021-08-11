@@ -32,7 +32,7 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
             <Navbar />
 
             <div>
-                <h2 className="title m-4"> New Tasks</h2>
+                <h2 className="title m-3 text-center"> New Tasks</h2>
             </div>
 
             {/* Task Form */}
@@ -71,12 +71,10 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     {/* Submit Button */}
 
                     <div className="d-flex flex-wrap justify-content-center row">
-                        <div className="row">
-                            <button className="btn btn-primary todo-button text-center mt-2" onClick={handleSubmit}>
+                            <button className="btn btn-primary todo-button text-center mt-2 col-3" onClick={handleSubmit}>
                                 {/* Scrapped classNames:  col-3 */}
                                 Add Task
                             </button>
-                        </div>
 
                     </div>
                     {/* </div> */}
