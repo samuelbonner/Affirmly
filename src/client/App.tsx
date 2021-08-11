@@ -9,6 +9,7 @@ import LogIn from "./views/LogIn";
 import SignUp from "./views/SignUp";
 import NewTask from "./views/NewTask";
 import EditTask from "./views/EditTask";
+
 const App: React.FC = (props: AppProps) => {
     return (
         <BrowserRouter>

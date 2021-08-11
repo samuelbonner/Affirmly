@@ -79,24 +79,8 @@ const Home: React.FC<IHome> = () => {
             </nav>
 
 
-            <div className="text-center mt-3"><h3>Welcome, Affirmly</h3></div>
 
-            <div className="d-flex flex-wrap m-2 justify-content-center">
-                <input
-                    type="checkbox"
-                    className="form-check-input"
-                    id="exampleCheck1"
-                    onClick={() => {
-                        toast.show({
-                            title: "Task Completed!",
-                            content: affirmations[Math.floor(Math.random() * affirmations.length)],
-                            duration: 15000,
-                        });
-                    }}
-                />
-            </div>
-
-            <div className="text-center">Open Tasks</div>
+            <div className="text-center">Welcome, Affirmly!</div>
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
 
