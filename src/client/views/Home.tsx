@@ -51,8 +51,47 @@ const Home: React.FC<IHome> = () => {
     return (
         <>
             <Navbar />
+
+            {/* <nav className="navbar sticky-top">
+                <Link to="/home">
+                    <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
+                </Link>
+                <div>
+                    <Link to="/accomplishedtasks" className="link text-decoration-none">
+                        Accomplished Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/newtask" className="link text-decoration-none">
+                        New Task
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/trophycase" className="link text-decoration-none">
+                        Trophy Case
+                    </Link>
+                </div>
+                <div>
+                    <Link to="/" className="link text-decoration-none">
+                        Logout
+                    </Link>
+                </div>
+                <div>
+                    3 Day Streak
+                    <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
+                </div>
+            </nav> */}
+
+
+
+            <div className="text-center m-4">
+                <h3>
+                Welcome, Affirmly!
+                </h3>
+                </div>
             
             <div className="text-center mt-3"><h3><strong>Welcome, Affirmly!</strong></h3></div>
+
 
             {/*Affirmation placeholder for dynamic Affirmation loading*/}
 
