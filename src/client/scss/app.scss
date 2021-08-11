@@ -1,5 +1,5 @@
 $theme-colors: (
-    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,
+    "primary": #0091ea //Covalence Blue!  :D,,,,,,,,,,,,,,,,,,,,
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap.scss";
@@ -16,8 +16,6 @@ $theme-colors: (
     background-color: none;
     color: #dbf6e9;
     font-size: larger;
-
-
 
     &:hover {
         border-radius: 3px;
@@ -65,7 +63,6 @@ $theme-colors: (
         transition: 0.7s;
         box-shadow: 0px 0px 15px rgb(39, 39, 39);
         background-color: #31326f;
-
     }
 }
 
@@ -144,7 +141,6 @@ body {
 
     background-image: linear-gradient(to bottom right, turquoise, lightgreen);
     background-image: linear-gradient(to bottom right, rgb(64, 173, 224), lightgreen);
-
 }
 
 //Tasks table
@@ -168,16 +164,11 @@ body {
 //card for trophies and login
 .card {
     background-color: #9ddfd3;
-
 }
 
 .link {
     color: #dbf6e9;
-font-size: larger;
-}
-
-    box-shadow: 0px 0px 5px rgb(39, 39, 39);
-
+    font-size: larger;
 
     &:hover {
         box-shadow: 8px 8px 15px rgb(39, 39, 39);
