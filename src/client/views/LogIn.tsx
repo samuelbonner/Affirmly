@@ -41,22 +41,22 @@ const LogIn = () => {
                                 </div>
                             </div>
 
-                            <div className="text-center d-flex flex-wrap justify-content-center m-2">
+                            <div className="text-center d-flex flex-wrap row justify-content-center">
                                 <Link to="/home">
-                                    <button type="submit" className="btn login-btn mx-2 col">
+                                    <button type="submit" className="btn login-btn mx-2 col-4">
                                         Log In
                                     </button>
                                 </Link>
                             </div>
                         </form>
-                        <div className="ml-2 mr-4">
+                        <div className=" d-flex flex-wrap row justify-content-center">
                             <Link to="/signup">
-                                <button type="submit" className="btn login-btn m-2 col">
+                                <button type="submit" className="btn login-btn col-4">
                                     Sign Up
                                 </button>
                             </Link>
                         </div>
-                        <div className="popup" onClick={handleAboutPopup}>
+                        <div className="popup mt-2" onClick={handleAboutPopup}>
                             <img src="../images/question_mark.png" alt="icon" width="40" height="40" />
                             <span className="popuptext" id="myPopup">
                                 Affirmly is your own to-do list that rewards your efforts with positivity and encourages forming healthy habits.

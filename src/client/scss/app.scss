@@ -330,9 +330,23 @@ button:hover {
     border: 0;
 }
 
+#exampleCheck1 {
+    // background-color: white;
+    border-color: #0091ea;
+    height: 15px;
+}
 // .todo-button {
-//     background-color: #31326f;
+//     background-color: #f0ad4e;
 //     color: white;
 // }
+
+.edit-btn {
+    background-color: #f0ad4e;
+    margin-right: 1em;
+}
+
+.delete-btn {
+    background-color: #d9534f;
+}
 
 //#EndRegion of NewTask & EditTask form
