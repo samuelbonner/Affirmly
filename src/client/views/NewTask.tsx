@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
 import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+
 
 
 const NewTask: React.FC<NewTaskProps> = (props) => {
@@ -29,7 +31,9 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
 
     return (
         <>
-            <nav className="navbar sticky-top">
+			<Navbar />
+            
+            {/* <nav className="navbar sticky-top">
                 <Link to="/home">
                     <img src="../images/affirmlylogotransparent.png" alt="Affirmly Logo" width="120" height="100" />
                 </Link>
@@ -57,7 +61,7 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
                     3 Day Streak
                     <img src="../images/megaphone.gif" alt="megaphone" width="100" height="100" />
                 </div>
-            </nav>
+            </nav> */}
 
             <div>
                 <h2 className="title m-4"> New Tasks</h2>
@@ -89,11 +93,11 @@ const NewTask: React.FC<NewTaskProps> = (props) => {
 
                     {/* Priority Checkbox */}
 
-                    <div className="form-check form-switch col-12 text-center">
-                        <label className="form-check-label my-2" htmlFor="flexSwitchCheckDefault">
+                    <div className="form-check row text-center justify-content-center">
+                        <input value={priority} className="form-check-input ml-1 mb-4" id="defaultCheck1" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
+                        <label className="d-inline-flex form-check-label my-2" htmlFor="flexSwitchCheckDefault">
                             Priority?
                         </label>
-                        <input value={priority} className="form-check-input ml-1 mb-4" id="flexSwitchCheckDefault" type="checkbox" name="priority" onChange={(e) => setPriority(e.target.checked)} />
                     </div>
 
                     {/* Submit Button */}
