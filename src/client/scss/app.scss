@@ -140,6 +140,7 @@ body {
     background-image: linear-gradient(to bottom right, rgb(64, 173, 224), lightgreen);
 }
 
+//Tasks table
 .tasks-div {
     background-color: #c4d8ce;
     border-radius: 8px;
@@ -151,6 +152,8 @@ body {
         transition: 0.3s;
     }
 }
+
+//End of tasks table
 
 .checkbox {
     background-color: #31326f;
